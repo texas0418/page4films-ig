@@ -1,0 +1,9 @@
+.venv/
+.env
+.DS_Store
+__pycache__/
+logs/
+contact-sheet.png
+# Source music for reel scoring: large, re-downloadable from Pixabay,
+# and only needed locally at generation time. Rendered reels are tracked.
+assets/audio/
