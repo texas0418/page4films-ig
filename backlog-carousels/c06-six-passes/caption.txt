@@ -1,0 +1,1 @@
+The cut goes wrong when one viewing tries to do six jobs at once. One pass, one job, six times through. It's slower and it's faster.
