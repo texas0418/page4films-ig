@@ -1,0 +1,1 @@
+A table read isn't a performance, it's an instrument reading. Here's how we run one so the script gets caught before the schedule pays for it.
