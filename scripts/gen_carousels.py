@@ -6,6 +6,7 @@ page counter and KEEP SWIPING hint, numbered point slides, closer slide.
 Queue format: one folder per carousel with slide_1.png..slide_N.png +
 caption.txt. Filmmaker craft only per Simon's standing rule.
 """
+import glob
 import os
 from PIL import Image, ImageDraw, ImageFont
 
@@ -110,9 +111,9 @@ def point(kicker, n, pages, title, support):
     return img
 
 
-def closer(kicker, pages):
+def closer(kicker, page, pages):
     img, draw = slide_base()
-    chrome(draw, kicker, pages, pages, last=True)
+    chrome(draw, kicker, page, pages)
     center(draw, "Keep this one.", 480, f(BODONI, 110, 2), INK)
     center(draw, "Save it for the shoot day.", 640, f(BODONI, 56, 1), RED)
     draw.line([(W / 2 - 160, 760), (W / 2 + 160, 760)], fill=RULE, width=2)
@@ -121,19 +122,69 @@ def closer(kicker, pages):
     return img
 
 
+def rounded_icon(path, size, radius_ratio=0.22):
+    icon = Image.open(path).convert("RGB").resize((size, size))
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, size, size),
+                                           radius=int(size * radius_ratio), fill=255)
+    icon.putalpha(mask)
+    return icon
+
+
+def mise_slide(pages):
+    """Closing cross-promo. Copy limited to the live App Store listing:
+    Mise - Film Director Suite, free, seller Simon Shih."""
+    img, draw = slide_base()
+    chrome(draw, "OUR APP", pages, pages, last=True)
+    icon = rounded_icon(os.path.join(ROOT, "assets/mise-icon.png"), 180)
+    img.paste(icon, (int((W - 180) / 2), 250), icon)
+    center(draw, "Mise", 500, f(BODONI, 110, 2), INK)
+    center(draw, "Film Director Suite", 650, f(BODONI, 56, 1), RED)
+    draw.line([(W / 2 - 160, 760), (W / 2 + 160, 760)], fill=RULE, width=2)
+    center(draw, "Call sheets, shot lists, scheduling,", 800, f(AVENIR, 40, 5), SOFT)
+    center(draw, "budgets, locations, lighting diagrams.", 852, f(AVENIR, 40, 5), SOFT)
+    tracked(draw, "FREE ON THE APP STORE", 940, f(AVENIR, 34, 2), INK, tracking=6)
+    return img
+
+
+def _dest(slug):
+    """Regenerate in place: never resurrect a posted carousel, never move one
+    between queue-carousels/ and backlog-carousels/."""
+    posted = os.path.join(ROOT, "posted")
+    if os.path.isdir(posted) and any(slug in n for n in os.listdir(posted)):
+        return None
+    for d in ("queue-carousels", "backlog-carousels"):
+        path = os.path.join(ROOT, d, slug)
+        if os.path.isdir(path):
+            return path
+    return os.path.join(ROOT, "queue-carousels", slug)
+
+
 def carousel(slug, kicker, head, sub, points, caption):
-    pages = len(points) + 2
-    out = os.path.join(ROOT, "queue-carousels", slug)
+    pages = len(points) + 3          # cover + points + closer + Mise
+    if pages > 10:                   # Instagram rejects carousels over 10
+        print(f"ERROR {slug}: {pages} slides exceeds the 10-slide limit; "
+              f"drop {pages - 10} point(s). Not generated.")
+        return
+    out = _dest(slug)
+    if out is None:
+        print("skip", slug, "(already posted)")
+        return
     os.makedirs(out, exist_ok=True)
+    for stale in glob.glob(os.path.join(out, "slide_*.png")):
+        os.remove(stale)
     slides = [cover(kicker, head, sub, pages)]
     for i, (title, support) in enumerate(points, 1):
         slides.append(point(kicker, i, pages, title, support))
-    slides.append(closer(kicker, pages))
+    slides.append(closer(kicker, pages - 1, pages))
+    slides.append(mise_slide(pages))
     for i, s in enumerate(slides, 1):
         s.save(os.path.join(out, f"slide_{i}.png"))
-    with open(os.path.join(out, "caption.txt"), "w") as fh:
-        fh.write(caption.strip() + "\n")
-    print("built", slug, f"({pages} slides)")
+    cap = os.path.join(out, "caption.txt")
+    if not os.path.exists(cap):       # never clobber an edited caption
+        with open(cap, "w") as fh:
+            fh.write(caption.strip() + "\n")
+    print("built", slug, f"({pages} slides) -> {os.path.basename(os.path.dirname(out))}")
 
 
 carousel("c01-seven-questions", "PREP",
