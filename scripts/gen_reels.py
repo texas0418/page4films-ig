@@ -18,7 +18,8 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W, H = 1080, 1920
 FPS = 30
-DUR = 15.5
+MISE_T = 15.5      # original end; the Mise cross-promo card runs from here
+DUR = 17.7         # MISE_T + 2.2s Mise card (Simon 2026-09-12: every post carries it)
 
 CREAM = (245, 239, 228)
 INK = (26, 26, 26)
@@ -28,7 +29,8 @@ SOFT = (74, 70, 63)
 
 BODONI = "/System/Library/Fonts/Supplemental/Bodoni 72.ttc"
 AVENIR = "/System/Library/Fonts/Avenir Next.ttc"
-FFMPEG = "/usr/local/bin/ffmpeg"
+FFMPEG = next(p for p in ("/opt/homebrew/bin/ffmpeg", "/usr/local/bin/ffmpeg")
+              if os.path.exists(p))  # arm64 Homebrew first; Intel path kept for history
 
 
 def f(path, size, index=0):
@@ -72,8 +74,24 @@ def fit_size(lines, path, index, size, maxw=900):
 GRAIN = [Image.effect_noise((W, H), 14).convert("L") for _ in range(6)]
 
 
+def _dest(slug):
+    """Regenerate in place: never resurrect a posted reel, never move one
+    between queue-reels/ and backlog-reels/. (Same rule as gen_carousels.)"""
+    posted = os.path.join(ROOT, "posted")
+    if os.path.isdir(posted) and any(slug in n for n in os.listdir(posted)):
+        return None
+    for d in ("queue-reels", "backlog-reels"):
+        path = os.path.join(ROOT, d, slug)
+        if os.path.isdir(path):
+            return path
+    return os.path.join(ROOT, "queue-reels", slug)
+
+
 def build_reel(slug, kicker, hook, beats, caption):
-    out = os.path.join(ROOT, "queue-reels", slug)
+    out = _dest(slug)
+    if out is None:
+        print("skip", slug, "(already posted)")
+        return
     os.makedirs(out, exist_ok=True)
 
     def chrome_fn(d):
@@ -118,6 +136,23 @@ def build_reel(slug, kicker, hook, beats, caption):
         tracked(d, "PAGE 4 FILMS", cy + 200, f(AVENIR, 34, 2), INK, tracking=12)
         tracked(d, "@PAGE4FILMS", cy + 270, f(AVENIR, 28, 5), MUTED, tracking=8)
 
+    def mise_fn(d):
+        pass  # icon pasted separately; text drawn here
+    mise_l = layer(mise_fn)
+    icon_s = 210
+    icon = Image.open(os.path.join(ROOT, "assets", "mise-icon.png")).convert("RGB").resize((icon_s, icon_s))
+    mask = Image.new("L", (icon_s, icon_s), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, icon_s, icon_s), radius=int(icon_s * 0.22), fill=255)
+    icon.putalpha(mask)
+    mise_l.alpha_composite(icon, (int((W - icon_s) / 2), 560))
+    md = ImageDraw.Draw(mise_l)
+    center(md, "Mise", 830, f(BODONI, 130, 2), INK)
+    center(md, "Film Director Suite", 1010, f(BODONI, 64, 1), RED)
+    md.line([(W / 2 - 160, 1130), (W / 2 + 160, 1130)], fill=(205, 198, 185), width=3)
+    center(md, "Call sheets, shot lists, scheduling,", 1180, f(AVENIR, 44, 5), SOFT)
+    center(md, "budgets, locations, lighting diagrams.", 1240, f(AVENIR, 44, 5), SOFT)
+    tracked(md, "FREE ON THE APP STORE", 1350, f(AVENIR, 36, 2), INK, tracking=7)
+
     chrome_l, hook_l, rule_l, end_l = layer(chrome_fn), layer(hook_fn), layer(rule_fn), layer(end_fn)
 
     # (layer, t_in, fade_dur, drift)
@@ -132,7 +167,7 @@ def build_reel(slug, kicker, hook, beats, caption):
     audio = sorted(glob.glob(os.path.join(ROOT, "assets", "audio", "*.m*")))
     if audio:
         cmd += ["-i", random.choice(audio), "-shortest", "-c:a", "aac", "-b:a", "128k",
-                "-af", "volume=0.85,afade=t=in:st=0:d=0.8,afade=t=out:st=13.2:d=2.3"]
+                "-af", "volume=0.85,afade=t=in:st=0:d=0.8,afade=t=out:st=15.4:d=2.3"]
     cmd += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20",
             "-movflags", "+faststart", os.path.join(out, "reel.mp4")]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE,
@@ -155,11 +190,18 @@ def build_reel(slug, kicker, hook, beats, caption):
                         tmp.putalpha(tmp.getchannel("A").point(lambda p: int(p * a)))
                 frame.alpha_composite(tmp, (0, dy))
         else:
-            a = ease((t - END_T) / 0.8)
-            tmp = end_l.copy()
-            if a < 1:
-                tmp.putalpha(tmp.getchannel("A").point(lambda p: int(p * a)))
-            frame.alpha_composite(tmp)
+            x = ease((t - MISE_T) / 0.6) if t >= MISE_T else 0.0
+            a = ease((t - END_T) / 0.8) * (1 - x)
+            if a > 0:
+                tmp = end_l.copy()
+                if a < 1:
+                    tmp.putalpha(tmp.getchannel("A").point(lambda p: int(p * a)))
+                frame.alpha_composite(tmp)
+            if x > 0:
+                tmp = mise_l.copy()
+                if x < 1:
+                    tmp.putalpha(tmp.getchannel("A").point(lambda p: int(p * x)))
+                frame.alpha_composite(tmp)
             ch = chrome_l.copy()
             frame.alpha_composite(ch)
         g = GRAIN[n % len(GRAIN)]
