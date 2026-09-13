@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Page 4 Films IG — moved from cron 2026-09-12: cron's context cannot reach
+     the git credential helper (ledger pushes failed with 'Device not
+     configured'); the launchd gui domain can, proven by probe. launchd also
+     fires missed slots on wake. Install: launchctl bootstrap gui/$(id -u) <plist> -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.simonshih.page4films-carousels</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/myfuckingmacbookair/Documents/GitHub/page4films-ig/.venv/bin/python</string>
+    <string>/Users/myfuckingmacbookair/Documents/GitHub/page4films-ig/scripts/publish.py</string>
+    <string>--queue</string>
+    <string>queue-carousels</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/myfuckingmacbookair/Documents/GitHub/page4films-ig</string>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>11</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>/Users/myfuckingmacbookair/Library/Logs/page4films.log</string>
+  <key>StandardErrorPath</key><string>/Users/myfuckingmacbookair/Library/Logs/page4films.log</string>
+  <key>ProcessType</key><string>Background</string>
+</dict>
+</plist>
