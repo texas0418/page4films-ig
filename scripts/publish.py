@@ -142,6 +142,15 @@ def next_post():
         if len(slides) >= 2:
             return name, "carousel", [rel(p) for p in slides], caption
         if os.path.exists(os.path.join(d, "image.png")):
+            # Simon's standing order (2026-09-12): every post carries the Mise
+            # end-card. A single image publishes as a 2-slide carousel with the
+            # shared card appended; if the card asset is missing, fall back to
+            # a plain photo post rather than skip the slot.
+            endcard = os.path.join(ROOT, "assets", "mise-endcard.png")
+            if os.path.exists(endcard):
+                return (name, "carousel",
+                        [rel(os.path.join(d, "image.png")), rel(endcard)],
+                        caption)
             return name, "image", [rel(os.path.join(d, "image.png"))], caption
     return None, None, None, None
 
