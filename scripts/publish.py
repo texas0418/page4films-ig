@@ -151,16 +151,20 @@ def next_post():
         if len(slides) >= 2:
             return name, "carousel", [rel(p) for p in slides], caption
         if os.path.exists(os.path.join(d, "image.png")):
-            # Simon's standing order (2026-09-12): every post carries the Mise
-            # end-card. A single image publishes as a 2-slide carousel with the
-            # shared card appended; if the card asset is missing, fall back to
-            # a plain photo post rather than skip the slot.
+            # Simon's standing order: every post ends on the Mise card, with
+            # no exceptions, so a single image publishes as a 2-slide carousel
+            # with the shared card appended. Losing the asset stops the slot
+            # rather than quietly posting a card without it; the 19:05 catch-up
+            # and the 20:05 safety net both retry.
             endcard = os.path.join(ROOT, "assets", "mise-endcard.png")
-            if os.path.exists(endcard):
-                return (name, "carousel",
-                        [rel(os.path.join(d, "image.png")), rel(endcard)],
-                        caption)
-            return name, "image", [rel(os.path.join(d, "image.png"))], caption
+            if not os.path.exists(endcard):
+                log(f"ERROR: {endcard} is missing and every post must end on "
+                    "the Mise card. Restore it (it is tracked in git); "
+                    f"holding {name} rather than posting without it.")
+                sys.exit(1)
+            return (name, "carousel",
+                    [rel(os.path.join(d, "image.png")), rel(endcard)],
+                    caption)
     return None, None, None, None
 
 
