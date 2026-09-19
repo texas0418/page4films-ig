@@ -170,17 +170,47 @@ def sync(message):
     return True
 
 
-def remote_sha_with(paths):
-    """SHA on origin/<BRANCH> whose tree contains every path, or None."""
+def resolve_on_remote(paths):
+    """Map each local file to a path on origin/<BRANCH> holding identical bytes.
+
+    A file normally sits at its own path. When replenish.py moves a folder from
+    backlog-x/ to queue-x/, the bytes are already on origin under the old path,
+    so fall back to that rather than demanding a push: cron cannot push here,
+    because the osxkeychain credential is unreadable outside a login session.
+
+    Returns (commit_sha, paths to use in the raw URLs) or None.
+    """
     git("fetch", "-q", "origin", BRANCH, check=False)
     r = git("rev-parse", f"origin/{BRANCH}", check=False)
     if r.returncode != 0:
         return None
     sha = r.stdout.strip()
+    tree = None
+    resolved = []
     for p in paths:
-        if git("cat-file", "-e", f"{sha}:{p}", check=False).returncode != 0:
+        blob = git("hash-object", p, check=False).stdout.strip()
+        if not blob:
             return None
-    return sha
+        # Compare bytes, not just the path: regenerating slides in place (the
+        # Mise end-card rewrite did this) leaves origin holding a stale file
+        # at the very same path, which would publish silently.
+        at_path = git("rev-parse", f"{sha}:{p}", check=False)
+        if at_path.returncode == 0 and at_path.stdout.strip() == blob:
+            resolved.append(p)
+            continue
+        if tree is None:
+            tree = git("ls-tree", "-r", sha, check=False).stdout
+        alt = None
+        for line in tree.splitlines():
+            parts = line.split(None, 3)      # mode, type, sha<TAB>path
+            if len(parts) == 4 and parts[2] == blob:
+                alt = parts[3]
+                break
+        if alt is None:
+            return None
+        log(f"{p} is not on origin; identical bytes found at {alt}")
+        resolved.append(alt)
+    return sha, resolved
 
 
 def url_ready(url, tries=10, pause=3):
@@ -218,18 +248,20 @@ def main():
         sys.exit(1)
 
     # Instagram fetches the media itself, so it has to be live on GitHub first.
-    sha = remote_sha_with(paths)
-    if not sha:
+    found = resolve_on_remote(paths)
+    if not found:
         log("media not on origin yet; pushing")
         sync(f"Queue sync before publishing {name}")
-        sha = remote_sha_with(paths)
-    if not sha:
+        found = resolve_on_remote(paths)
+    if not found:
         log("ERROR: media is not on GitHub and the push failed. "
             "Run 'git push origin main' in the project, then rerun.")
         sys.exit(1)
+    sha, remote_paths = found
 
     slug = repo_slug()
-    urls = [f"{RAW_BASE}/{slug}/{sha}/{urllib.parse.quote(p)}" for p in paths]
+    urls = [f"{RAW_BASE}/{slug}/{sha}/{urllib.parse.quote(p)}"
+            for p in remote_paths]
     if not url_ready(urls[0]):
         log(f"ERROR: {urls[0]} is not fetchable; aborting before Instagram sees it")
         sys.exit(1)
