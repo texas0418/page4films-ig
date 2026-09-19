@@ -44,6 +44,15 @@ API = "https://graph.instagram.com/v23.0"
 RAW_BASE = "https://raw.githubusercontent.com"
 BRANCH = "main"
 DRY_RUN = "--dry-run" in sys.argv
+# Catch-up flags, matching paint-the-town-ig. guarded-run.sh cancels a slot
+# outright when the Mac is asleep at 11:00, with no retry, so later runs pick
+# the slot back up. There is exactly one publishing slot per day here, so a
+# single shared date stamp is enough to tell whether today's slot landed.
+CATCH_UP = "--catch-up" in sys.argv
+IF_BEHIND = (int(sys.argv[sys.argv.index("--if-behind") + 1])
+             if "--if-behind" in sys.argv else None)
+STAMP_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          os.pardir, "logs", "last_success.txt")
 QUEUE = "queue"
 if "--queue" in sys.argv:
     QUEUE = sys.argv[sys.argv.index("--queue") + 1].strip("/")
@@ -227,7 +236,36 @@ def url_ready(url, tries=10, pause=3):
     return False
 
 
+def published_today():
+    return (os.path.exists(STAMP_PATH)
+            and open(STAMP_PATH).read().strip() == date.today().isoformat())
+
+
+def behind_by(days):
+    """True when the last successful publish is at least `days` old, and when
+    there is no stamp at all, so a fresh install still posts."""
+    if not os.path.exists(STAMP_PATH):
+        return True
+    try:
+        last = date.fromisoformat(open(STAMP_PATH).read().strip())
+    except ValueError:
+        return True
+    return (date.today() - last).days >= days
+
+
+def stamp_success():
+    os.makedirs(os.path.dirname(STAMP_PATH), exist_ok=True)
+    with open(STAMP_PATH, "w") as fh:
+        fh.write(date.today().isoformat() + "\n")
+
+
 def main():
+    if CATCH_UP and published_today():
+        log("catch-up: already published today; exit")
+        return
+    if IF_BEHIND is not None and not behind_by(IF_BEHIND):
+        log(f"safety net: last publish under {IF_BEHIND} days ago; exit")
+        return
     env = read_env()
     if not env.get("IG_ACCESS_TOKEN"):
         log("no IG_ACCESS_TOKEN in .env; aborting")
@@ -305,6 +343,7 @@ def main():
 
     out = api_post(f"{ig_id}/media_publish", creation_id=cid, access_token=token)
     log(f"published media id {out.get('id')}")
+    stamp_success()
     dest = f"{date.today().isoformat()}-{name}"
     shutil.move(os.path.join(ROOT, QUEUE, name), os.path.join(ROOT, "posted", dest))
     log(f"moved to posted/{dest}")
