@@ -1,0 +1,1 @@
+Draw a line between your actors and keep the camera on one side of it. Cross it and the geography reverses, and people feel lost without knowing what happened.
