@@ -85,15 +85,33 @@ Legacy is shot. Columbia, South Carolina, and it is in post now.
 A young father living out of his car takes a job from an aging handyman renovating an empty house, and finds a mentor whose own family is falling apart over what the house is worth.
 
 Written and directed by John Valley.
+Director of photography Sarah Massey.
 Produced by David Axe and Simon Shih.
 Executive producer Bob Bates.
 Stills by Augusta Quirk, @aaaquirk.
 """
 
 
+def _dest(slug):
+    """Regenerate wherever the folder currently lives, and never resurrect a
+    posted one. The folder is promoted by hand from pending-bts into a real
+    queue, so without this a rerun would rebuild a stale duplicate."""
+    posted = os.path.join(ROOT, "posted")
+    if os.path.isdir(posted) and any(slug in n for n in os.listdir(posted)):
+        return None
+    for d in ("queue-carousels", "queue", "backlog-carousels", "pending-bts"):
+        path = os.path.join(ROOT, d, slug)
+        if os.path.isdir(path):
+            return path
+    return os.path.join(ROOT, "pending-bts", slug)
+
+
 def main():
     pages = len(FRAMES) + 2            # cover + frames + Mise
-    out = os.path.join(ROOT, "pending-bts", "00-legacy-wrap")
+    out = _dest("00-legacy-wrap")
+    if out is None:
+        print("skip 00-legacy-wrap (already posted)")
+        return
     os.makedirs(out, exist_ok=True)
 
     slides = [gc.cover(KICKER, ["Shot in", "Columbia."],
@@ -104,10 +122,8 @@ def main():
 
     for i, s in enumerate(slides, 1):
         s.save(os.path.join(out, f"slide_{i}.png"))
-    cap_path = os.path.join(out, "caption.txt")
-    if not os.path.exists(cap_path):
-        with open(cap_path, "w") as fh:
-            fh.write(CAPTION.strip() + "\n")
+    with open(os.path.join(out, "caption.txt"), "w") as fh:
+        fh.write(CAPTION.strip() + "\n")
     print(f"built {os.path.relpath(out, ROOT)} ({pages} slides)")
 
 
