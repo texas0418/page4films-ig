@@ -151,7 +151,8 @@ def build_reel(slug, kicker, hook, beats, caption):
     md.line([(W / 2 - 160, 1130), (W / 2 + 160, 1130)], fill=(205, 198, 185), width=3)
     center(md, "Call sheets, shot lists, scheduling,", 1180, f(AVENIR, 44, 5), SOFT)
     center(md, "budgets, locations, lighting diagrams.", 1240, f(AVENIR, 44, 5), SOFT)
-    tracked(md, "FREE ON THE APP STORE", 1350, f(AVENIR, 36, 2), INK, tracking=7)
+    tracked(md, "FREE ON THE APP STORE", 1340, f(AVENIR, 36, 2), INK, tracking=7)
+    tracked(md, "AND GOOGLE PLAY", 1398, f(AVENIR, 36, 2), INK, tracking=7)
 
     chrome_l, hook_l, rule_l, end_l = layer(chrome_fn), layer(hook_fn), layer(rule_fn), layer(end_fn)
 
@@ -166,7 +167,11 @@ def build_reel(slug, kicker, hook, beats, caption):
            "-r", str(FPS), "-i", "-"]
     audio = sorted(glob.glob(os.path.join(ROOT, "assets", "audio", "*.m*")))
     if audio:
-        cmd += ["-i", random.choice(audio), "-shortest", "-c:a", "aac", "-b:a", "128k",
+        # Seeded by slug so a reel keeps its track across regenerations.
+        # Unseeded random.choice reshuffled the music every time the card
+        # copy changed, churning binaries and altering approved reels.
+        cmd += ["-i", random.Random(slug).choice(audio), "-shortest",
+                "-c:a", "aac", "-b:a", "128k",
                 "-af", "volume=0.85,afade=t=in:st=0:d=0.8,afade=t=out:st=15.4:d=2.3"]
     cmd += ["-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20",
             "-movflags", "+faststart", os.path.join(out, "reel.mp4")]

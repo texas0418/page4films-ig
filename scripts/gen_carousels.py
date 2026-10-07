@@ -132,8 +132,10 @@ def rounded_icon(path, size, radius_ratio=0.22):
 
 
 def mise_slide(pages):
-    """Closing cross-promo. Copy limited to the live App Store listing:
-    Mise - Film Director Suite, free, seller Simon Shih."""
+    """Closing cross-promo. Copy limited to verified facts from the two live
+    listings: Mise - Film Director Suite, free to download, seller Simon Shih.
+    iOS id6759731914; Google Play com.mise.film_director_suite, confirmed live
+    2026-10-06."""
     img, draw = slide_base()
     chrome(draw, "OUR APP", pages, pages, last=True)
     icon = rounded_icon(os.path.join(ROOT, "assets/mise-icon.png"), 180)
@@ -143,7 +145,8 @@ def mise_slide(pages):
     draw.line([(W / 2 - 160, 760), (W / 2 + 160, 760)], fill=RULE, width=2)
     center(draw, "Call sheets, shot lists, scheduling,", 800, f(AVENIR, 40, 5), SOFT)
     center(draw, "budgets, locations, lighting diagrams.", 852, f(AVENIR, 40, 5), SOFT)
-    tracked(draw, "FREE ON THE APP STORE", 940, f(AVENIR, 34, 2), INK, tracking=6)
+    tracked(draw, "FREE ON THE APP STORE", 928, f(AVENIR, 34, 2), INK, tracking=6)
+    tracked(draw, "AND GOOGLE PLAY", 982, f(AVENIR, 34, 2), INK, tracking=6)
     return img
 
 
@@ -187,86 +190,87 @@ def carousel(slug, kicker, head, sub, points, caption):
     print("built", slug, f"({pages} slides) -> {os.path.basename(os.path.dirname(out))}")
 
 
-carousel("c01-seven-questions", "PREP",
-         ["Seven questions", "before you roll."], "Answer them the night before.",
-         [("What is this scene about?", ["One sentence, or the edit", "will ask again."]),
-          ("Which shot does it live on?", ["Protect that one", "before anything else."]),
-          ("Has the blocking been walked?", ["On the actual floor,", "with the actual actors."]),
-          ("What does sound need?", ["Quiet the fridge. Kill the AC.", "Ask before you unplug."]),
-          ("Where is the light from?", ["Name the real source", "before you fake it."]),
-          ("What is the backup plan?", ["Weather, lost location, sick actor.", "One answer for each."]),
-          ("When is lunch?", ["Everyone already knows.", "That's the point."])],
-         "The night before checklist we actually use. Seven questions, and if one of them has no answer, tomorrow already has a problem."),
+if __name__ == "__main__":
+    carousel("c01-seven-questions", "PREP",
+             ["Seven questions", "before you roll."], "Answer them the night before.",
+             [("What is this scene about?", ["One sentence, or the edit", "will ask again."]),
+              ("Which shot does it live on?", ["Protect that one", "before anything else."]),
+              ("Has the blocking been walked?", ["On the actual floor,", "with the actual actors."]),
+              ("What does sound need?", ["Quiet the fridge. Kill the AC.", "Ask before you unplug."]),
+              ("Where is the light from?", ["Name the real source", "before you fake it."]),
+              ("What is the backup plan?", ["Weather, lost location, sick actor.", "One answer for each."]),
+              ("When is lunch?", ["Everyone already knows.", "That's the point."])],
+             "The night before checklist we actually use. Seven questions, and if one of them has no answer, tomorrow already has a problem."),
 
-carousel("c02-reads-as-cheap", "CRAFT",
-         ["What reads", "as cheap."], "It's never the camera.",
-         [("Clipped audio", ["The fastest way", "to lose an audience."]),
-          ("Mixed color temps", ["Windows fighting lamps,", "nobody winning."]),
-          ("Unmotivated light", ["Pretty with no reason", "reads false."]),
-          ("Rushed inserts", ["The cutaway you didn't light", "like the rest of the scene."]),
-          ("Empty frame corners", ["Undressed rooms", "tell on the schedule."]),
-          ("Safe, wide coverage", ["Fear photographs", "as flatness."])],
-         "None of these cost money to fix, which is exactly why they read as cheap when they're ignored. The camera was never the problem."),
+    carousel("c02-reads-as-cheap", "CRAFT",
+             ["What reads", "as cheap."], "It's never the camera.",
+             [("Clipped audio", ["The fastest way", "to lose an audience."]),
+              ("Mixed color temps", ["Windows fighting lamps,", "nobody winning."]),
+              ("Unmotivated light", ["Pretty with no reason", "reads false."]),
+              ("Rushed inserts", ["The cutaway you didn't light", "like the rest of the scene."]),
+              ("Empty frame corners", ["Undressed rooms", "tell on the schedule."]),
+              ("Safe, wide coverage", ["Fear photographs", "as flatness."])],
+             "None of these cost money to fix, which is exactly why they read as cheap when they're ignored. The camera was never the problem."),
 
-carousel("c03-table-read", "THE PAGE",
-         ["Run the table read", "like it matters."], "The script gets caught here or on set.",
-         [("Cast every part", ["Even the one line roles.", "Don't double the leads."]),
-          ("Hand off stage directions", ["Someone else reads them.", "You listen. That's your job."]),
-          ("Don't perform, don't direct", ["First reads are for hearing,", "not fixing."]),
-          ("Mark the stumbles", ["Where readers trip,", "the writing tripped first."]),
-          ("Watch the room", ["Boredom is data.", "So is leaning in."]),
-          ("Rewrite within two days", ["While the stumbles", "are still warm."])],
-         "A table read isn't a performance, it's an instrument reading. Here's how we run one so the script gets caught before the schedule pays for it."),
+    carousel("c03-table-read", "THE PAGE",
+             ["Run the table read", "like it matters."], "The script gets caught here or on set.",
+             [("Cast every part", ["Even the one line roles.", "Don't double the leads."]),
+              ("Hand off stage directions", ["Someone else reads them.", "You listen. That's your job."]),
+              ("Don't perform, don't direct", ["First reads are for hearing,", "not fixing."]),
+              ("Mark the stumbles", ["Where readers trip,", "the writing tripped first."]),
+              ("Watch the room", ["Boredom is data.", "So is leaning in."]),
+              ("Rewrite within two days", ["While the stumbles", "are still warm."])],
+             "A table read isn't a performance, it's an instrument reading. Here's how we run one so the script gets caught before the schedule pays for it."),
 
-carousel("c04-crewing-up", "PEOPLE",
-         ["Crewing up on", "a small budget."], "Respect is the currency.",
-         [("Say the number early", ["Honesty about money", "is where respect starts."]),
-          ("Feed people properly", ["Hot food and real breaks.", "No exceptions."]),
-          ("Keep short days short", ["Twelve hours", "means twelve hours."]),
-          ("Give real credits", ["And send reel footage fast,", "not eventually."]),
-          ("Hire attitude over gear", ["Kits can be rented.", "Calm can't."]),
-          ("Call them back", ["The next film", "starts with this crew."])],
-         "You can't always pay people what they're worth. You can always be straight with them, feed them well and send the footage fast. How we crew small."),
+    carousel("c04-crewing-up", "PEOPLE",
+             ["Crewing up on", "a small budget."], "Respect is the currency.",
+             [("Say the number early", ["Honesty about money", "is where respect starts."]),
+              ("Feed people properly", ["Hot food and real breaks.", "No exceptions."]),
+              ("Keep short days short", ["Twelve hours", "means twelve hours."]),
+              ("Give real credits", ["And send reel footage fast,", "not eventually."]),
+              ("Hire attitude over gear", ["Kits can be rented.", "Calm can't."]),
+              ("Call them back", ["The next film", "starts with this crew."])],
+             "You can't always pay people what they're worth. You can always be straight with them, feed them well and send the footage fast. How we crew small."),
 
-carousel("c05-location-scout", "LOCATIONS",
-         ["Scout like a", "department head."], "The location says yes. Verify it.",
-         [("Listen for ten minutes", ["Traffic, planes, that fridge.", "Sound scouts too."]),
-          ("Visit at your shoot hour", ["The light you see", "is the light you get."]),
-          ("Find the power", ["Circuits, panels,", "and what trips when."]),
-          ("Count the bathrooms", ["Crew comfort is", "schedule insurance."]),
-          ("Solve parking on paper", ["Ten cars need somewhere", "legal to sit for twelve hours."]),
-          ("Get permission in writing", ["A handshake evaporates", "on shoot day."]),
-          ("Photograph everything", ["Wides, corners, ceilings.", "Prep remembers for you."])],
-         "A location says yes in the afternoon and betrays you at call time. Scout like every department is standing next to you."),
+    carousel("c05-location-scout", "LOCATIONS",
+             ["Scout like a", "department head."], "The location says yes. Verify it.",
+             [("Listen for ten minutes", ["Traffic, planes, that fridge.", "Sound scouts too."]),
+              ("Visit at your shoot hour", ["The light you see", "is the light you get."]),
+              ("Find the power", ["Circuits, panels,", "and what trips when."]),
+              ("Count the bathrooms", ["Crew comfort is", "schedule insurance."]),
+              ("Solve parking on paper", ["Ten cars need somewhere", "legal to sit for twelve hours."]),
+              ("Get permission in writing", ["A handshake evaporates", "on shoot day."]),
+              ("Photograph everything", ["Wides, corners, ceilings.", "Prep remembers for you."])],
+             "A location says yes in the afternoon and betrays you at call time. Scout like every department is standing next to you."),
 
-carousel("c06-six-passes", "THE EDIT",
-         ["Cut it", "six times."], "One job per pass.",
-         [("Story pass", ["Does every scene", "earn its place?"]),
-          ("Performance pass", ["Best takes only. Ignore", "the schedule's favorites."]),
-          ("Rhythm pass", ["Where does it drag?", "Cut sooner."]),
-          ("Sound pass", ["Smooth the seams before", "anyone else hears them."]),
-          ("Eyes pass", ["Watch strangers watch it.", "Say nothing."]),
-          ("Ego pass", ["Kill what's there for you,", "not for the film."])],
-         "The cut goes wrong when one viewing tries to do six jobs at once. One pass, one job, six times through. It's slower and it's faster."),
+    carousel("c06-six-passes", "THE EDIT",
+             ["Cut it", "six times."], "One job per pass.",
+             [("Story pass", ["Does every scene", "earn its place?"]),
+              ("Performance pass", ["Best takes only. Ignore", "the schedule's favorites."]),
+              ("Rhythm pass", ["Where does it drag?", "Cut sooner."]),
+              ("Sound pass", ["Smooth the seams before", "anyone else hears them."]),
+              ("Eyes pass", ["Watch strangers watch it.", "Say nothing."]),
+              ("Ego pass", ["Kill what's there for you,", "not for the film."])],
+             "The cut goes wrong when one viewing tries to do six jobs at once. One pass, one job, six times through. It's slower and it's faster."),
 
-carousel("c07-rehearsal-week", "DIRECTING",
-         ["Rehearse for a week.", "Save a month."], "The cheapest production value there is.",
-         [("Read it, then talk", ["Biography, backstory,", "what they want and from whom."]),
-          ("Walk the real spaces", ["Or tape the floor", "to match them."]),
-          ("Find the verbs", ["What each character does", "to the other one."]),
-          ("Let them surprise you", ["The blocking actors invent", "usually beats yours."]),
-          ("Lock what works", ["Repeatable beats", "brilliant once."]),
-          ("Leave room on the day", ["Rehearsal builds the floor,", "not the ceiling."])],
-         "A week of rehearsal is the cheapest production value there is. This is what we try to get done before anyone touches a camera."),
+    carousel("c07-rehearsal-week", "DIRECTING",
+             ["Rehearse for a week.", "Save a month."], "The cheapest production value there is.",
+             [("Read it, then talk", ["Biography, backstory,", "what they want and from whom."]),
+              ("Walk the real spaces", ["Or tape the floor", "to match them."]),
+              ("Find the verbs", ["What each character does", "to the other one."]),
+              ("Let them surprise you", ["The blocking actors invent", "usually beats yours."]),
+              ("Lock what works", ["Repeatable beats", "brilliant once."]),
+              ("Leave room on the day", ["Rehearsal builds the floor,", "not the ceiling."])],
+             "A week of rehearsal is the cheapest production value there is. This is what we try to get done before anyone touches a camera."),
 
-carousel("c08-first-short", "POV",
-         ["Your first short,", "honestly."], "None of this is about gear.",
-         [("Keep it under ten minutes", ["Festivals program", "short shorts first."]),
-          ("One location if you can", ["Company moves", "eat half a day."]),
-          ("Spend on sound", ["It's the line between", "student film and cinema."]),
-          ("Cast patient people", ["First sets run slow.", "Kindness survives them."]),
-          ("Finish it", ["An exported file beats", "a perfect timeline."]),
-          ("Then make another", ["The second one is where", "you start improving."])],
-         "Everything we'd tell someone about to make their first short film. None of it is about the gear."),
+    carousel("c08-first-short", "POV",
+             ["Your first short,", "honestly."], "None of this is about gear.",
+             [("Keep it under ten minutes", ["Festivals program", "short shorts first."]),
+              ("One location if you can", ["Company moves", "eat half a day."]),
+              ("Spend on sound", ["It's the line between", "student film and cinema."]),
+              ("Cast patient people", ["First sets run slow.", "Kindness survives them."]),
+              ("Finish it", ["An exported file beats", "a perfect timeline."]),
+              ("Then make another", ["The second one is where", "you start improving."])],
+             "Everything we'd tell someone about to make their first short film. None of it is about the gear."),
 
-print("done")
+    print("done")
