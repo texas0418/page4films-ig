@@ -26,6 +26,7 @@ Usage: publish.py [--dry-run] [--queue DIR]   (dry run does everything
 except media_publish; nothing appears on the feed. --queue defaults to
 queue/; cron passes queue-carousels/ on Tuesdays, queue-reels/ on Sats.)
 """
+import fcntl
 import glob
 import json
 import os
@@ -273,7 +274,45 @@ def stamp_success():
         fh.write(date.today().isoformat() + "\n")
 
 
+def reconcile():
+    """File anything that published but never got moved.
+
+    publish.py writes published.json the instant media_publish returns, before
+    the move. If the process dies in between (it did on 2026-10-07, crashing in
+    shutil.move), the folder is still in the queue holding a post that is
+    already live, and the next slot would publish it a second time. This files
+    it instead of republishing it.
+    """
+    for q in ("queue", "queue-carousels", "queue-reels"):
+        qd = os.path.join(ROOT, q)
+        if not os.path.isdir(qd):
+            continue
+        for name in sorted(os.listdir(qd)):
+            marker = os.path.join(qd, name, "published.json")
+            if not os.path.exists(marker):
+                continue
+            info = json.load(open(marker))
+            dest = f"{info.get('date', date.today().isoformat())}-{name}"
+            target = os.path.join(ROOT, "posted", dest)
+            if os.path.exists(target):
+                dest += "-dup"
+                target = os.path.join(ROOT, "posted", dest)
+            shutil.move(os.path.join(qd, name), target)
+            log(f"RECOVERED: {name} was already published as {info.get('id')}; "
+                f"filed to posted/{dest} instead of publishing it again")
+
+
 def main():
+    # One publisher at a time. macOS fires missed cron jobs on wake, so a
+    # slot and its wake-triggered twin can otherwise race and double-post.
+    lock = open(os.path.join(ROOT, "logs", ".publish.lock"), "w")
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        log("another publish run holds the lock; exiting")
+        return
+
+    reconcile()
     if CATCH_UP and published_today():
         log("catch-up: already published today; exit")
         return
@@ -357,6 +396,11 @@ def main():
 
     out = api_post(f"{ig_id}/media_publish", creation_id=cid, access_token=token)
     log(f"published media id {out.get('id')}")
+    # Record it in the folder BEFORE anything else can fail. Everything below
+    # is bookkeeping; a crash after this point must never cause a republish.
+    with open(os.path.join(ROOT, QUEUE, name, "published.json"), "w") as fh:
+        json.dump({"id": out.get("id"), "date": date.today().isoformat(),
+                   "queue": QUEUE}, fh)
     stamp_success()
     dest = f"{date.today().isoformat()}-{name}"
     shutil.move(os.path.join(ROOT, QUEUE, name), os.path.join(ROOT, "posted", dest))
