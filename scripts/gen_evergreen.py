@@ -21,6 +21,17 @@ D_CREAM = (240, 236, 228)
 D_MUTED = (172, 168, 160)
 D_RULE = (70, 68, 64)
 
+# Three tones so the grid does not read as one repeated tile. Simon flagged
+# 2026-10-12 that near-identical cream cards looked like posts were doubling.
+TONES = {
+    "light": dict(bg=(245, 239, 228), ink=(26, 26, 26), muted=(120, 114, 104),
+                  rule=(205, 198, 185), accent=(139, 26, 26), body=(74, 70, 63)),
+    "dark":  dict(bg=(26, 26, 26), ink=(240, 236, 228), muted=(172, 168, 160),
+                  rule=(70, 68, 64), accent=(196, 74, 74), body=(172, 168, 160)),
+    "red":   dict(bg=(139, 26, 26), ink=(245, 239, 228), muted=(226, 200, 200),
+                  rule=(176, 92, 92), accent=(245, 239, 228), body=(226, 200, 200)),
+}
+
 BODONI = "/System/Library/Fonts/Supplemental/Bodoni 72.ttc"
 AVENIR = "/System/Library/Fonts/Avenir Next.ttc"
 
@@ -59,10 +70,9 @@ def crop_marks(draw, ink):
         draw.line([(cx, cy), (cx, cy + dy * L)], fill=ink, width=w)
 
 
-def chrome(draw, kicker, num, dark):
-    ink = D_CREAM if dark else INK
-    muted = D_MUTED if dark else MUTED
-    accent = (196, 74, 74) if dark else RED
+def chrome(draw, kicker, num, tone):
+    t = TONES[tone]
+    ink, muted, accent = t["ink"], t["muted"], t["accent"]
     crop_marks(draw, ink)
     kf = f(AVENIR, 27, 2)
     tracked(draw, "PAGE 4 FILMS", 96, kf, ink, tracking=10)
@@ -70,14 +80,29 @@ def chrome(draw, kicker, num, dark):
     numf = f(AVENIR, 27, 5)
     draw.text((W - 112 - draw.textlength(num, font=numf), 96), num, font=numf, fill=muted)
     draw.ellipse((W / 2 - 5, 153, W / 2 + 5, 163), fill=accent)
-    draw.line([(W / 2 - 82, H - 96), (W / 2 + 82, H - 96)], fill=D_RULE if dark else RULE, width=2)
+    draw.line([(W / 2 - 82, H - 96), (W / 2 + 82, H - 96)], fill=t["rule"], width=2)
     tracked(draw, "PAGE4FILMS.COM", H - 74, f(AVENIR, 24, 2), muted, tracking=6)
 
 
-def build(slug, num, kicker, head, bodyl, sub=None, dark=False, caption=""):
-    img = Image.new("RGB", (W, H), INK if dark else CREAM)
+def _dest(slug):
+    """Regenerate in place, never resurrect a posted card. gen_carousels and
+    gen_reels have had this since August; this one was missed, so a rerun
+    would have rebuilt every published card straight back into the queue."""
+    posted = os.path.join(ROOT, "posted")
+    if os.path.isdir(posted) and any(slug in n for n in os.listdir(posted)):
+        return None
+    for d in ("queue", "backlog-posts"):
+        path = os.path.join(ROOT, d, slug)
+        if os.path.isdir(path):
+            return path
+    return os.path.join(ROOT, "queue", slug)
+
+
+def build(slug, num, kicker, head, bodyl, sub=None, tone="light", caption=""):
+    t = TONES[tone]
+    img = Image.new("RGB", (W, H), t["bg"])
     draw = ImageDraw.Draw(img)
-    chrome(draw, kicker, f"NO. {num:03d}", dark)
+    chrome(draw, kicker, f"NO. {num:03d}", tone)
 
     hsize = fit(draw, head, BODONI, 2, 118)
     bsize = fit(draw, bodyl, AVENIR, 5, 54)
@@ -89,22 +114,25 @@ def build(slug, num, kicker, head, bodyl, sub=None, dark=False, caption=""):
 
     hf = f(BODONI, hsize, 2)
     for line in head:
-        center(draw, line, y, hf, D_CREAM if dark else INK)
+        center(draw, line, y, hf, t["ink"])
         y += int(hsize * 1.06)
     if sub:
         y += 34
-        center(draw, sub, y, f(BODONI, 62, 1), (196, 74, 74) if dark else RED)
+        center(draw, sub, y, f(BODONI, 62, 1), t["accent"])
         y += sh
     y += 44
-    draw.line([(W / 2 - 160, y), (W / 2 + 160, y)], fill=D_RULE if dark else RULE, width=2)
+    draw.line([(W / 2 - 160, y), (W / 2 + 160, y)], fill=t["rule"], width=2)
     y += 92
     bf = f(AVENIR, bsize, 5)
-    bfill = D_MUTED if dark else (74, 70, 63)
+    bfill = t["body"]
     for line in bodyl:
         center(draw, line, y, bf, bfill)
         y += int(bsize * 1.55)
 
-    out = os.path.join(ROOT, "queue", f"{num:02d}-{slug}")
+    out = _dest(f"{num:02d}-{slug}")
+    if out is None:
+        print("skip", f"{num:02d}-{slug}", "(already posted)")
+        return
     os.makedirs(out, exist_ok=True)
     img.save(os.path.join(out, "image.png"))
     with open(os.path.join(out, "caption.txt"), "w") as fh:
@@ -203,7 +231,16 @@ POSTS = [
          caption="Every rule in filmmaking has an exception, including this one. Learn the rules so you know exactly what you're paying when you break them."),
 ]
 
+# Grid variety: the feed is 3 tiles wide and near-identical cream cards made
+# it look like posts were repeating. Every third card now runs dark, on top of
+# the ones already written as dark for their content, which breaks the pattern
+# diagonally across the grid.
+# light, dark, light, red: half the cards stay on paper, and a dark or a red
+# lands every other post so no three neighbouring tiles look alike.
+CYCLE = ["light", "dark", "light", "red"]
 for i, p in enumerate(POSTS, start=9):
     build(p["slug"], i, p["kicker"], p["head"], p["body"],
-          sub=p.get("sub"), dark=p.get("dark", False), caption=p["caption"])
+          sub=p.get("sub"),
+          tone="dark" if p.get("dark") else CYCLE[i % 4],
+          caption=p["caption"])
 print("done")

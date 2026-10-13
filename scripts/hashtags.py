@@ -14,16 +14,22 @@ Tags are resolved from the post's folder name, so existing queued posts pick
 them up without any caption.txt being rewritten.
 """
 
-MAX_TAGS = 30          # Meta's hard limit
-MAX_CAPTION = 2200     # Meta's hard limit, characters
+MAX_TAGS = 5           # Instagram's own cap since the Dec 2025 rollout
+MAX_CAPTION = 2200     # Meta API limit, characters
 
-BASE = ["indiefilm", "filmmaking", "indiefilmmaker", "independentfilm",
-        "filmmakerlife", "filmcommunity"]
-LOCALE = ["atlantafilm", "georgiafilm"]
+# Instagram announced Dec 2025 that captions on posts and reels are limited to
+# FIVE hashtags, rolling out gradually, with its own guidance that "using fewer
+# (up to 5) more targeted hashtags, rather than many generic ones" performs
+# better. Meta's API reference still documents 30; that looks stale, and we
+# follow the platform rather than the doc. This supersedes the growth plan's
+# "ten to fifteen per post", which predates the change.
+#
+# Each set is five: three specific to the post, then one craft anchor and one
+# locale anchor.
+ANCHOR = ["indiefilmmaker", "atlantafilm"]
 
-# first keyword found in the slug wins
 TOPIC = [
-    (("sound", "silence"), ["productionsound", "locationsound", "filmsound"]),
+    (("sound", "silence"), ["productionsound", "locationsound", "soundforfilm"]),
     (("edit", "cut", "passes"), ["filmediting", "postproduction", "filmeditor"]),
     (("camera", "lens", "blocking", "light", "haze", "grade"),
      ["cinematography", "cinematographer", "camerawork"]),
@@ -36,15 +42,13 @@ TOPIC = [
     (("festival",), ["filmfestival", "shortfilm", "indiefilmfestival"]),
     (("schedule", "prep", "producing", "budget", "money"),
      ["filmproduction", "preproduction", "producerlife"]),
-    (("short", "first"), ["shortfilm", "shortfilmmaker"]),
+    (("short", "first"), ["shortfilm", "shortfilmmaker", "indiefilm"]),
 ]
-DEFAULT_TOPIC = ["filmproduction", "onset", "setlife"]
+DEFAULT_TOPIC = ["indiefilm", "filmmaking", "onset"]
 
-# posts that need their own set rather than a keyword match
 OVERRIDE = {
-    "00-legacy-wrap": ["shortfilm", "behindthescenes", "onset", "filmcrew",
-                       "southcarolinafilm", "columbiasc", "setlife",
-                       "filmproduction"],
+    "00-legacy-wrap": ["shortfilm", "behindthescenes", "southcarolinafilm",
+                       "filmcrew", "indiefilmmaker"],
 }
 
 
@@ -60,7 +64,7 @@ def tags_for(slug):
                 chosen = tags
                 break
     out = []
-    for t in BASE + LOCALE + chosen:          # dedupe, keep order
+    for t in chosen + ANCHOR:                 # dedupe, keep order
         if t not in out:
             out.append(t)
     return out[:MAX_TAGS]
