@@ -38,6 +38,9 @@ import urllib.parse
 import urllib.request
 from datetime import date, datetime
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import hashtags
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_PATH = os.path.join(ROOT, ".env")
 API = "https://graph.instagram.com/v23.0"
@@ -144,6 +147,13 @@ def next_post():
         if not (os.path.isdir(d) and os.path.exists(cap)):
             continue
         caption = open(cap).read().strip()
+        # Simon's growth plan asks for 10-15 tags per post. He chose the
+        # caption over a first comment (2026-10-12) so the publisher still
+        # never makes a comment API call. Resolved from the folder name, so
+        # no queued caption.txt had to be rewritten.
+        caption, n_tags = hashtags.append_to(caption, name)
+        if n_tags:
+            log(f"{name}: appended {n_tags} hashtags")
         if os.path.exists(os.path.join(d, "reel.mp4")):
             return name, "reel", [rel(os.path.join(d, "reel.mp4"))], caption
         slides = sorted(glob.glob(os.path.join(d, "slide_*.png")),
