@@ -70,8 +70,15 @@ def tags_for(slug):
     return out[:MAX_TAGS]
 
 
+# Every post points at the festival calendar (Simon, 2026-10-26). Captions are not clickable,
+# so the line names the address and sends people to the bio link.
+CALENDAR_LINE = "Free film festival and screenplay contest deadline calendar: festivals.page4films.com (link in bio)"
+
+
 def append_to(caption, slug):
-    """Caption with its tag block appended, trimmed to Meta's limits."""
+    """Caption with the calendar line and its tag block appended, trimmed to Meta's limits."""
+    if "festivals.page4films.com" not in caption:
+        caption = caption + "\n\n" + CALENDAR_LINE
     tags = tags_for(slug)
     existing = caption.count("#")
     while tags:
