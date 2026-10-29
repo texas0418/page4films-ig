@@ -1,0 +1,83 @@
+{
+ "rows": [
+  {
+   "name": "Full Frame Documentary Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "Features $90 / Shorts $70",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": true,
+   "id": "full-frame-documentary-film-festival"
+  },
+  {
+   "name": "Cosmic Rays Film Festival",
+   "date": "2026-11-16",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "cosmic-rays-film-festival"
+  },
+  {
+   "name": "Final Girls Berlin Film Festival",
+   "date": "2026-11-17",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "final-girls-berlin-film-festival"
+  },
+  {
+   "name": "Tribeca Festival",
+   "date": "2026-11-18",
+   "label": "Features Official",
+   "fee": "$90",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": false,
+   "id": "tribeca-festival"
+  },
+  {
+   "name": "Onion City Experimental Film + Video Festival",
+   "date": "2026-11-19",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "onion-city-experimental-film-video-festival"
+  },
+  {
+   "name": "Florida Film Festival",
+   "date": "2026-11-20",
+   "label": "Late",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "florida-film-festival"
+  },
+  {
+   "name": "Ammar Popular Film Festival",
+   "date": "2026-11-21",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "ammar-popular-film-festival"
+  }
+ ],
+ "total": 60,
+ "start": "2026-11-15"
+}

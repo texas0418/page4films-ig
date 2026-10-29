@@ -1,0 +1,83 @@
+{
+ "rows": [
+  {
+   "name": "AIDC The FACTory International Pitching Forum",
+   "date": "2026-11-08",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "aidc-the-factory-international-pitching-forum"
+  },
+  {
+   "name": "Busan International Short Film Festival",
+   "date": "2026-11-08",
+   "label": "Early Bird",
+   "fee": "\u20ac11",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": false,
+   "id": "busan-international-short-film-festival"
+  },
+  {
+   "name": "Jos\u00e9 Ignacio International Film Festival (JIIFF)",
+   "date": "2026-11-09",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": true,
+   "id": "jose-ignacio-international-film-festival-jiiff"
+  },
+  {
+   "name": "BlueCat Screenplay Competition",
+   "date": "2026-11-10",
+   "label": "Final",
+   "fee": "Feature $95, Short $50",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "bluecat-screenplay-competition"
+  },
+  {
+   "name": "Ikebukuro Mirai International Film Festival",
+   "date": "2026-11-11",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "ikebukuro-mirai-international-film-festival"
+  },
+  {
+   "name": "Chicago Irish Film Festival",
+   "date": "2026-11-12",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "chicago-irish-film-festival"
+  },
+  {
+   "name": "Golden Rhyton Documentary and Animation Festival",
+   "date": "2026-11-13",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "golden-rhyton-documentary-and-animation-festival"
+  }
+ ],
+ "total": 24,
+ "start": "2026-11-08"
+}

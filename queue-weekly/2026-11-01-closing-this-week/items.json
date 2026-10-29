@@ -1,0 +1,83 @@
+{
+ "rows": [
+  {
+   "name": "Docville International Documentary Film Festival",
+   "date": "2026-11-01",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": true,
+   "id": "docville-international-documentary-film-festival"
+  },
+  {
+   "name": "Movies That Matter Festival",
+   "date": "2026-11-01",
+   "label": "Final",
+   "fee": "\u20ac35",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": true,
+   "id": "movies-that-matter-festival"
+  },
+  {
+   "name": "RiverRun International Film Festival",
+   "date": "2026-11-02",
+   "label": "Late",
+   "fee": "$50 short / $65 feature",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "riverrun-international-film-festival"
+  },
+  {
+   "name": "CPH:DOX",
+   "date": "2026-11-03",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": true,
+   "id": "cph-dox"
+  },
+  {
+   "name": "Berlin International Film Festival (Berlinale)",
+   "date": "2026-11-04",
+   "label": "Final",
+   "fee": "\u20ac75",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": true,
+   "id": "berlin-international-film-festival-berlinale"
+  },
+  {
+   "name": "TorinoFilmLab FeatureLab",
+   "date": "2026-11-05",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "torinofilmlab-featurelab"
+  },
+  {
+   "name": "Florida Film Festival",
+   "date": "2026-11-06",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "florida-film-festival"
+  }
+ ],
+ "total": 66,
+ "start": "2026-11-01"
+}

@@ -283,7 +283,7 @@ def reconcile():
     already live, and the next slot would publish it a second time. This files
     it instead of republishing it.
     """
-    for q in ("queue", "queue-carousels", "queue-reels"):
+    for q in ("queue", "queue-carousels", "queue-reels", "queue-weekly"):
         qd = os.path.join(ROOT, q)
         if not os.path.isdir(qd):
             continue

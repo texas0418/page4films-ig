@@ -1,0 +1,83 @@
+{
+ "rows": [
+  {
+   "name": "No Reason Short Film Festival",
+   "date": "2026-11-22",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "no-reason-short-film-festival"
+  },
+  {
+   "name": "One World Romania",
+   "date": "2026-11-22",
+   "label": "Final",
+   "fee": "\u20ac10-\u20ac20",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "one-world-romania"
+  },
+  {
+   "name": "Durban International Film Festival",
+   "date": "2026-11-23",
+   "label": "Early Bird",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "durban-international-film-festival"
+  },
+  {
+   "name": "Manchester Film Festival",
+   "date": "2026-11-23",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": true,
+   "final": true,
+   "id": "manchester-film-festival"
+  },
+  {
+   "name": "Mountainfilm",
+   "date": "2026-11-24",
+   "label": "Early",
+   "fee": "$40 short / $60 feature",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "mountainfilm"
+  },
+  {
+   "name": "ESCINE Short Film Festival (Festival de Cortos ESCINE)",
+   "date": "2026-11-25",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "escine-short-film-festival-festival-de-cortos-escine"
+  },
+  {
+   "name": "Open City Documentary Festival",
+   "date": "2026-11-27",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": true,
+   "final": true,
+   "id": "open-city-documentary-festival"
+  }
+ ],
+ "total": 23,
+ "start": "2026-11-22"
+}
