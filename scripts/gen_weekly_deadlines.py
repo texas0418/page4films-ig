@@ -135,16 +135,24 @@ def card(rows, total, start, page=1, pages=2, shown=None):
     return img
 
 
-def caption(rows, total, start):
+def caption(rows, total, start, limit=1700):
+    """Instagram allows 2,200 characters including the calendar line and hashtags, so list
+    highlights (Oscar/BAFTA and final deadlines first) and point to the cards for the rest."""
     end = start + timedelta(days=6)
-    lines = [f"Closing this week, {start:%b} {start.day} to {end:%b} {end.day}:", ""]
-    for r in rows:
+    head = [f"Closing this week, {start:%b} {start.day} to {end:%b} {end.day}. Swipe for every deadline.", ""]
+    picks = sorted(rows, key=lambda r: (not (r["oscar"] or r["bafta"]), not r["final"], r["date"]))
+    lines, used = [], len("\n".join(head))
+    foot = ["", "Confirm dates and fees on each festival's own site before you pay."]
+    for r in sorted(picks[:12], key=lambda r: (r["date"], r["name"].lower())):
         d = datetime.strptime(r["date"], "%Y-%m-%d")
-        lines.append(f"{d:%a %b} {d.day}: {r['name']} ({r['label'].lower()} deadline{', ' + r['fee'] if r['fee'] else ''})")
-    if total > len(rows):
-        lines.append(f"Plus {total - len(rows)} more on the calendar.")
-    lines += ["", "Confirm dates and fees on each festival's own site before you pay."]
-    return "\n".join(lines)
+        line = f"{d:%a %b} {d.day}: {r['name']} ({'final' if r['final'] else r['label'].lower()} deadline)"
+        if used + len(line) + 1 + 120 > limit:
+            break
+        lines.append(line); used += len(line) + 1
+    more = total - len(lines)
+    if more > 0:
+        lines.append(f"Plus {more} more on the cards and the calendar.")
+    return "\n".join(head + lines + foot)
 
 
 def bluesky_text(rows, total, start):
