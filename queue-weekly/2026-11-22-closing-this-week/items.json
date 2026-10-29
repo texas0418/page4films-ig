@@ -23,6 +23,17 @@
    "id": "one-world-romania"
   },
   {
+   "name": "Manchester Film Festival",
+   "date": "2026-11-23",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": true,
+   "final": true,
+   "id": "manchester-film-festival"
+  },
+  {
    "name": "Durban International Film Festival",
    "date": "2026-11-23",
    "label": "Early Bird",
@@ -34,15 +45,81 @@
    "id": "durban-international-film-festival"
   },
   {
-   "name": "Manchester Film Festival",
+   "name": "Flickerfest International Short Film Festival",
+   "date": "2026-11-23",
+   "label": "FlickerUp Youth",
+   "fee": "US$17",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": false,
+   "id": "flickerfest-international-short-film-festival"
+  },
+  {
+   "name": "Ashland Independent Film Festival",
    "date": "2026-11-23",
    "label": "Final",
    "fee": "",
    "type": "Festival",
    "oscar": false,
-   "bafta": true,
+   "bafta": false,
    "final": true,
-   "id": "manchester-film-festival"
+   "id": "ashland-independent-film-festival"
+  },
+  {
+   "name": "Osaka Asian Film Festival",
+   "date": "2026-11-23",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "osaka-asian-film-festival"
+  },
+  {
+   "name": "VicScreen Originate Slate",
+   "date": "2026-11-23",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "vicscreen-originate-slate"
+  },
+  {
+   "name": "ATX TV Festival Pitch Competition",
+   "date": "2026-11-23",
+   "label": "Regular",
+   "fee": "$65",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "atx-tv-festival-pitch-competition"
+  },
+  {
+   "name": "CNC Aide aux cin\u00e9mas du monde",
+   "date": "2026-11-23",
+   "label": "Pre-production session 2026-04",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "cnc-aide-aux-cinemas-du-monde"
+  },
+  {
+   "name": "Missouri Stories Scriptwriting Fellowship",
+   "date": "2026-11-23",
+   "label": "Regular",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "missouri-stories-scriptwriting-fellowship"
   },
   {
    "name": "Mountainfilm",
@@ -56,6 +133,39 @@
    "id": "mountainfilm"
   },
   {
+   "name": "Bogliasco Fellowships",
+   "date": "2026-11-24",
+   "label": "Fall 2027 semester (standard fee)",
+   "fee": "$30",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "bogliasco-fellowships"
+  },
+  {
+   "name": "CineStory TV Retreat & Fellowship",
+   "date": "2026-11-24",
+   "label": "Extended Late",
+   "fee": "$90",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "cinestory-tv-retreat-fellowship"
+  },
+  {
+   "name": "Festival National du Film d'Animation",
+   "date": "2026-11-24",
+   "label": "Student and professional shorts",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "festival-national-du-film-d-animation"
+  },
+  {
    "name": "ESCINE Short Film Festival (Festival de Cortos ESCINE)",
    "date": "2026-11-25",
    "label": "Final",
@@ -67,6 +177,17 @@
    "id": "escine-short-film-festival-festival-de-cortos-escine"
   },
   {
+   "name": "Thessaloniki Agora",
+   "date": "2026-11-25",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "thessaloniki-agora"
+  },
+  {
    "name": "Open City Documentary Festival",
    "date": "2026-11-27",
    "label": "Final",
@@ -76,6 +197,61 @@
    "bafta": true,
    "final": true,
    "id": "open-city-documentary-festival"
+  },
+  {
+   "name": "Festival Travelling",
+   "date": "2026-11-27",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "festival-travelling"
+  },
+  {
+   "name": "Guadalajara Construye",
+   "date": "2026-11-27",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "guadalajara-construye"
+  },
+  {
+   "name": "Rendez-vous Qu\u00e9bec Cin\u00e9ma",
+   "date": "2026-11-27",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "rendez-vous-quebec-cinema"
+  },
+  {
+   "name": "Canadian Film Fest",
+   "date": "2026-11-27",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "canadian-film-fest"
+  },
+  {
+   "name": "Overlook Film Festival",
+   "date": "2026-11-27",
+   "label": "Regular",
+   "fee": "Features $90 / Shorts $75",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "overlook-film-festival"
   }
  ],
  "total": 23,

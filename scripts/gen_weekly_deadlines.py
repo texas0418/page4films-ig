@@ -16,12 +16,15 @@ import sys
 from datetime import date, datetime, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_carousels import (W, H, INK, RED, MUTED, RULE, SOFT, BODONI, AVENIR, f, center, tracked,
+from PIL import Image, ImageDraw
+from gen_carousels import (W, H, INK, RED, MUTED, RULE, SOFT, CREAM, BODONI, AVENIR, f, center, tracked,
                            chrome, slide_base, mise_slide)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CAL = "festivals.page4films.com"
-MAX_ROWS = 7
+PER_CARD = 7
+MAX_CARDS = 9          # Instagram allows 10 slides; the last one is the Mise card
+MAX_ROWS = PER_CARD * MAX_CARDS
 TYPE = {"festival": "Festival", "contest": "Screenplay contest", "fund": "Fund or lab"}
 
 
@@ -53,7 +56,7 @@ def week_items(fests, start):
                      "type": TYPE.get(f_.get("type"), "Festival"), "oscar": bool(f_.get("oscar")), "bafta": bool(f_.get("bafta")),
                      "final": is_final, "id": f_["id"]})
     # Most useful first when there are too many: final deadlines, then Oscar/BAFTA, then earliest.
-    rows.sort(key=lambda r: (r["date"], r["name"].lower()))
+    rows.sort(key=lambda r: (r["date"], not (r["oscar"] or r["bafta"]), not r["final"], r["name"].lower()))
     total = len(rows)
     if total > MAX_ROWS:
         # Spread across the week: each day's list ordered Oscar/BAFTA first, then final deadlines,
@@ -68,7 +71,7 @@ def week_items(fests, start):
             for d_ in order:
                 if days[d_] and len(pick) < MAX_ROWS:
                     pick.append(days[d_].pop(0))
-        rows = sorted(pick, key=lambda r: (r["date"], r["name"].lower()))
+        rows = sorted(pick, key=lambda r: (r["date"], not (r["oscar"] or r["bafta"]), not r["final"], r["name"].lower()))
     return rows, total
 
 
@@ -80,33 +83,55 @@ def short(draw, text, fnt, width):
     return text.rstrip() + "..."
 
 
-def card(rows, total, start):
+GOLD = (242, 177, 36)
+PALE = (250, 220, 200)
+SOFTPALE = (240, 200, 190)
+LINE = (170, 60, 60)
+
+
+def card(rows, total, start, page=1, pages=2, shown=None):
+    """Marquee design (Simon 10-28: the weekly festival post is ALWAYS this design, so it is easy to find)."""
     end = start + timedelta(days=6)
-    img, draw = slide_base()
-    chrome(draw, "THIS WEEK", 1, 2)
-    center(draw, "Closing This Week", 205, f(BODONI, 92, 2), INK)
-    span = f"{start:%b} {start.day} to {end:%b} {end.day}, {end.year}" if start.month != end.month else f"{start:%B} {start.day} to {end.day}, {end.year}"
-    center(draw, span, 318, f(BODONI, 46, 1), RED)
-    draw.line([(W / 2 - 160, 392), (W / 2 + 160, 392)], fill=RULE, width=2)
-    y, x0, x1 = 430, 112, W - 112
-    datef, namef, metaf = f(AVENIR, 30, 2), f(BODONI, 38, 2), f(AVENIR, 26, 5)
-    step = 92 if len(rows) > 6 else 104
+    img = Image.new("RGB", (W, H), RED)
+    draw = ImageDraw.Draw(img)
+    span = f"{start:%b} {start.day} to {end:%b} {end.day}, {end.year}".upper() if start.month != end.month else f"{start:%b} {start.day} to {end.day}, {end.year}".upper()
+    draw.rounded_rectangle((90, 90, W - 90, 330), radius=18, fill=CREAM)
+    for x in range(120, W - 100, 36):
+        draw.ellipse((x - 6, 104, x + 6, 116), fill=GOLD)
+        draw.ellipse((x - 6, 304, x + 6, 316), fill=GOLD)
+    center(draw, "NOW CLOSING" if page == 1 else "NOW CLOSING, CONTINUED", 140, f(AVENIR, 30, 2), RED)
+    center(draw, "This Week's Deadlines", 185, f(BODONI, 70, 2), INK)
+    center(draw, span, 270, f(AVENIR, 26, 2), MUTED)
+    num = f"{page:02d} / {pages:02d}"
+    nf = f(AVENIR, 24, 5)
+    draw.text((W - 110 - draw.textlength(num, font=nf), 352), num, font=nf, fill=PALE)
+    y, x0, x1 = 400, 110, W - 110
+    datef, namef, metaf = f(AVENIR, 28, 2), f(BODONI, 40, 2), f(AVENIR, 24, 5)
     for r in rows:
         d = datetime.strptime(r["date"], "%Y-%m-%d")
-        draw.text((x0, y + 6), f"{d:%a} {d:%b} {d.day}".upper(), font=datef, fill=RED)
-        draw.text((x0 + 210, y), short(draw, r["name"], namef, x1 - x0 - 210), font=namef, fill=INK)
-        meta = r["type"] + "  ·  " + r["label"] + (" deadline" if r["label"] != "Final" else " deadline") + (f"  ·  {r['fee']}" if r["fee"] else "")
+        draw.text((x0, y + 4), f"{d:%a %b} {d.day}".upper(), font=datef, fill=PALE)
+        draw.text((x0 + 250, y), short(draw, r["name"], namef, x1 - x0 - 250), font=namef, fill=CREAM)
+        meta = ("Final deadline" if r["final"] else r["label"] + " deadline") + (f"  ·  {r['fee']}" if r["fee"] else "")
         if r["oscar"]:
             meta += "  ·  Oscar qualifying"
-        draw.text((x0 + 210, y + 50), short(draw, meta, metaf, x1 - x0 - 210), font=metaf, fill=SOFT)
-        y += step
+        elif r["bafta"]:
+            meta += "  ·  BAFTA qualifying"
+        if r["type"] != "Festival":
+            meta = r["type"] + "  ·  " + meta
+        draw.text((x0 + 250, y + 50), short(draw, meta, metaf, x1 - x0 - 250), font=metaf, fill=SOFTPALE)
+        y += 100
+        draw.line([(x0, y - 14), (x1, y - 14)], fill=LINE, width=1)
     if not rows:
-        center(draw, "A quiet week for deadlines.", 600, f(BODONI, 56, 1), INK)
-        center(draw, "See what opens next on the calendar.", 690, f(AVENIR, 38, 5), SOFT)
-    more = total - len(rows)
-    tail = (f"+ {more} more closing this week" if more > 0 else "Every deadline, checked against each festival's own site")
-    center(draw, tail, H - 230, f(AVENIR, 30, 5), MUTED)
-    tracked(draw, CAL.upper(), H - 170, f(AVENIR, 32, 2), INK, tracking=5)
+        center(draw, "A quiet week for deadlines.", 620, f(BODONI, 56, 1), CREAM)
+        center(draw, "See what opens next on the calendar.", 710, f(AVENIR, 36, 5), PALE)
+    shown = len(rows) if shown is None else shown
+    more = total - shown
+    if page < pages - 1:
+        tail = "Keep swiping for more deadlines"
+    else:
+        tail = (f"+ {more} more at {CAL}" if more > 0 else f"Every deadline: {CAL}")
+    center(draw, tail, H - 140, f(AVENIR, 30, 5), CREAM)
+    tracked(draw, "PAGE 4 FILMS  ·  " + ("SWIPE FOR MORE" if page < pages else "FREE DEADLINE CALENDAR"), H - 90, f(AVENIR, 22, 2), PALE, tracking=6)
     return img
 
 
@@ -150,8 +175,14 @@ def main():
     if os.path.exists(os.path.join(ROOT, "posted")) and any(n.endswith(slug) for n in os.listdir(os.path.join(ROOT, "posted"))):
         print("already posted", slug); return
     os.makedirs(d, exist_ok=True)
-    card(rows, total, start).save(os.path.join(d, "slide_1.png"))
-    mise_slide(2).save(os.path.join(d, "slide_2.png"))
+    for old in os.listdir(d):
+        if old.startswith("slide_") and old.endswith(".png"):
+            os.remove(os.path.join(d, old))
+    chunks = [rows[i:i + PER_CARD] for i in range(0, len(rows), PER_CARD)] or [[]]
+    pages = len(chunks) + 1
+    for n, chunk in enumerate(chunks, 1):
+        card(chunk, total, start, page=n, pages=pages, shown=len(rows)).save(os.path.join(d, f"slide_{n}.png"))
+    mise_slide(pages).save(os.path.join(d, f"slide_{pages}.png"))
     open(os.path.join(d, "caption.txt"), "w").write(caption(rows, total, start) + "\n")
     open(os.path.join(d, "bluesky.txt"), "w").write(bluesky_text(rows, total, start) + "\n")
     json.dump({"rows": rows, "total": total, "start": start.isoformat()}, open(os.path.join(d, "items.json"), "w"), indent=1)

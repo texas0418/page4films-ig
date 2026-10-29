@@ -1,6 +1,17 @@
 {
  "rows": [
   {
+   "name": "Busan International Short Film Festival",
+   "date": "2026-11-08",
+   "label": "Early Bird",
+   "fee": "\u20ac11",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": false,
+   "id": "busan-international-short-film-festival"
+  },
+  {
    "name": "AIDC The FACTory International Pitching Forum",
    "date": "2026-11-08",
    "label": "Final",
@@ -12,15 +23,26 @@
    "id": "aidc-the-factory-international-pitching-forum"
   },
   {
-   "name": "Busan International Short Film Festival",
+   "name": "Malaga Film Festival",
    "date": "2026-11-08",
-   "label": "Early Bird",
-   "fee": "\u20ac11",
+   "label": "Late (shorts, documentaries)",
+   "fee": "\u20ac30-\u20ac40",
    "type": "Festival",
-   "oscar": true,
-   "bafta": true,
+   "oscar": false,
+   "bafta": false,
    "final": false,
-   "id": "busan-international-short-film-festival"
+   "id": "malaga-film-festival"
+  },
+  {
+   "name": "Straight 8",
+   "date": "2026-11-08",
+   "label": "November delivery",
+   "fee": "\u00a3160",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "straight-8"
   },
   {
    "name": "Jos\u00e9 Ignacio International Film Festival (JIIFF)",
@@ -34,6 +56,61 @@
    "id": "jose-ignacio-international-film-festival-jiiff"
   },
   {
+   "name": "Omaha Film Festival",
+   "date": "2026-11-09",
+   "label": "Final",
+   "fee": "$60",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "omaha-film-festival"
+  },
+  {
+   "name": "Series Mania Writers Campus",
+   "date": "2026-11-09",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "series-mania-writers-campus"
+  },
+  {
+   "name": "Amazing Fantasy Fest",
+   "date": "2026-11-09",
+   "label": "Prehistoric",
+   "fee": "$10 short / $25 feature",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "amazing-fantasy-fest"
+  },
+  {
+   "name": "CNC Aide aux cin\u00e9mas du monde",
+   "date": "2026-11-09",
+   "label": "Post-production session 2026-04",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "cnc-aide-aux-cinemas-du-monde"
+  },
+  {
+   "name": "NZFC Feature Film Production Investment",
+   "date": "2026-11-09",
+   "label": "Round (Board Feb 2027)",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "nzfc-feature-film-production-investment"
+  },
+  {
    "name": "BlueCat Screenplay Competition",
    "date": "2026-11-10",
    "label": "Final",
@@ -43,6 +120,39 @@
    "bafta": false,
    "final": true,
    "id": "bluecat-screenplay-competition"
+  },
+  {
+   "name": "Seattle Asian American Film Festival",
+   "date": "2026-11-10",
+   "label": "Final",
+   "fee": "$32 short / $50 feature",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "seattle-asian-american-film-festival"
+  },
+  {
+   "name": "Seoul 29 Second Film Festival",
+   "date": "2026-11-10",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "seoul-29-second-film-festival"
+  },
+  {
+   "name": "Mardi Gras Film Festival",
+   "date": "2026-11-10",
+   "label": "Early",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "mardi-gras-film-festival"
   },
   {
    "name": "Ikebukuro Mirai International Film Festival",
@@ -56,6 +166,28 @@
    "id": "ikebukuro-mirai-international-film-festival"
   },
   {
+   "name": "Rendez-vous Qu\u00e9bec Cin\u00e9ma",
+   "date": "2026-11-11",
+   "label": "Regular rate ends",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "rendez-vous-quebec-cinema"
+  },
+  {
+   "name": "Stage 32 Search for New Blood Screenwriting Contest",
+   "date": "2026-11-11",
+   "label": "Regular",
+   "fee": "$69.50",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "stage-32-search-for-new-blood-screenwriting-contest"
+  },
+  {
    "name": "Chicago Irish Film Festival",
    "date": "2026-11-12",
    "label": "Final",
@@ -67,6 +199,17 @@
    "id": "chicago-irish-film-festival"
   },
   {
+   "name": "Yorkton Film Festival",
+   "date": "2026-11-12",
+   "label": "Student early bird",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "yorkton-film-festival"
+  },
+  {
    "name": "Golden Rhyton Documentary and Animation Festival",
    "date": "2026-11-13",
    "label": "Final",
@@ -76,6 +219,50 @@
    "bafta": false,
    "final": true,
    "id": "golden-rhyton-documentary-and-animation-festival"
+  },
+  {
+   "name": "Panorama Internacional Coisa de Cinema",
+   "date": "2026-11-13",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "panorama-internacional-coisa-de-cinema"
+  },
+  {
+   "name": "Tempo Documentary Festival",
+   "date": "2026-11-13",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "tempo-documentary-festival"
+  },
+  {
+   "name": "Banff World Media Festival",
+   "date": "2026-11-13",
+   "label": "Early",
+   "fee": "US$450",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "banff-world-media-festival"
+  },
+  {
+   "name": "International Black Film Festival",
+   "date": "2026-11-13",
+   "label": "Early Bird",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "international-black-film-festival"
   }
  ],
  "total": 24,

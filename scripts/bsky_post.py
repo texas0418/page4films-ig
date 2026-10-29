@@ -65,12 +65,16 @@ def main():
         return
     e = env()
     s = call("POST", "com.atproto.server.createSession", body={"identifier": e["BSKY_HANDLE"], "password": e["BSKY_APP_PASSWORD"]})
-    img = open(os.path.join(folder, "slide_1.png"), "rb").read()
-    blob = call("POST", "com.atproto.repo.uploadBlob", token=s["accessJwt"], raw=img, ctype="image/png")["blob"]
+    slides = sorted((n for n in os.listdir(folder) if n.startswith("slide_") and n.endswith(".png")), key=lambda n: int(n[6:-4]))
+    slides = slides[:-1][:4] or slides[:1]      # deadline cards only (not the Mise card); Bluesky allows 4 images
+    images = []
+    for k, name in enumerate(slides):
+        blob = call("POST", "com.atproto.repo.uploadBlob", token=s["accessJwt"], raw=open(os.path.join(folder, name), "rb").read(), ctype="image/png")["blob"]
+        images.append({"alt": alt if k == 0 else f"Closing This Week, card {k + 1}", "image": blob, "aspectRatio": {"width": 1080, "height": 1350}})
     record = {"$type": "app.bsky.feed.post", "text": text, "facets": facets,
               "createdAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z"), "langs": ["en"],
               "embed": {"$type": "app.bsky.embed.images",
-                        "images": [{"alt": alt, "image": blob, "aspectRatio": {"width": 1080, "height": 1350}}]}}
+                        "images": images}}
     r = call("POST", "com.atproto.repo.createRecord", token=s["accessJwt"],
              body={"repo": s["did"], "collection": "app.bsky.feed.post", "record": record})
     json.dump({"uri": r["uri"], "cid": r["cid"], "at": record["createdAt"]}, open(os.path.join(folder, "bluesky.json"), "w"))

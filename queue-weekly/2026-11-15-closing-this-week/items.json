@@ -12,6 +12,369 @@
    "id": "full-frame-documentary-film-festival"
   },
   {
+   "name": "Go Short International Short Film Festival Nijmegen",
+   "date": "2026-11-15",
+   "label": "Regular",
+   "fee": "\u20ac15",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": false,
+   "id": "go-short-international-short-film-festival-nijmegen"
+  },
+  {
+   "name": "New York International Children's Film Festival",
+   "date": "2026-11-15",
+   "label": "Late",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "new-york-international-children-s-film-festival"
+  },
+  {
+   "name": "Stuttgart International Festival of Animated Film (ITFS)",
+   "date": "2026-11-15",
+   "label": "Short Film Competitions",
+   "fee": "",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "stuttgart-international-festival-of-animated-film-itfs"
+  },
+  {
+   "name": "Animocje International Animation Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "animocje-international-animation-festival"
+  },
+  {
+   "name": "BUFF Malm\u00f6 International Children and Young People's Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "buff-malmo-international-children-and-young-people-s-film-festival"
+  },
+  {
+   "name": "Digi60 Filmmakers' Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "digi60-filmmakers-festival"
+  },
+  {
+   "name": "Ecozine International Film and Environment Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "\u20ac10",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "ecozine-international-film-and-environment-festival"
+  },
+  {
+   "name": "Fantasporto Oporto International Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "fantasporto-oporto-international-film-festival"
+  },
+  {
+   "name": "Festival du Premier Film d'Annonay",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "festival-du-premier-film-d-annonay"
+  },
+  {
+   "name": "FIGRA Festival International du Grand Reportage d'Actualit\u00e9",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "\u20ac68-\u20ac120 by length",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "figra-festival-international-du-grand-reportage-d-actualite"
+  },
+  {
+   "name": "Franklin Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "franklin-film-festival"
+  },
+  {
+   "name": "Kingston Canadian Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "kingston-canadian-film-festival"
+  },
+  {
+   "name": "Music & Cinema Marseille International Short Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "music-cinema-marseille-international-short-film-festival"
+  },
+  {
+   "name": "Oregon Media Arts Fellowship",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "oregon-media-arts-fellowship"
+  },
+  {
+   "name": "Roma Creative Contest",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "$12",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "roma-creative-contest"
+  },
+  {
+   "name": "Sguardi Altrove Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "\u20ac10 features; shorts free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "sguardi-altrove-film-festival"
+  },
+  {
+   "name": "Winter Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "$65",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "winter-film-festival"
+  },
+  {
+   "name": "WriteMovies Writing Contest",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "$69",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "writemovies-writing-contest"
+  },
+  {
+   "name": "Animal Nature Future Film Festival",
+   "date": "2026-11-15",
+   "label": "Regular",
+   "fee": "\u00a319 short / \u00a339 feature",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "animal-nature-future-film-festival"
+  },
+  {
+   "name": "Berlin Music Video Awards",
+   "date": "2026-11-15",
+   "label": "Early",
+   "fee": "\u20ac60",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "berlin-music-video-awards"
+  },
+  {
+   "name": "Cadence Video Poetry Festival",
+   "date": "2026-11-15",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "cadence-video-poetry-festival"
+  },
+  {
+   "name": "Charlotte Black Film Festival",
+   "date": "2026-11-15",
+   "label": "Early Bird",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "charlotte-black-film-festival"
+  },
+  {
+   "name": "Creative World Awards Screenwriting Competition",
+   "date": "2026-11-15",
+   "label": "Late",
+   "fee": "",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "creative-world-awards-screenwriting-competition"
+  },
+  {
+   "name": "Festival de Cine Nacional de \u00d1uble",
+   "date": "2026-11-15",
+   "label": "Confluencias lab (opens Oct 14)",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "festival-de-cine-nacional-de-nuble"
+  },
+  {
+   "name": "Gesher Multicultural Film Fund",
+   "date": "2026-11-15",
+   "label": "DocuStart feature documentary development lab",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "gesher-multicultural-film-fund"
+  },
+  {
+   "name": "Jaipur International Film Festival",
+   "date": "2026-11-15",
+   "label": "Extended",
+   "fee": "\u20b97,500 / $150 (features); \u20b93,000 / $60 (shorts)",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "jaipur-international-film-festival"
+  },
+  {
+   "name": "Miami Short Film Festival",
+   "date": "2026-11-15",
+   "label": "Earlybird",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "miami-short-film-festival"
+  },
+  {
+   "name": "New York Indian Film Festival",
+   "date": "2026-11-15",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "new-york-indian-film-festival"
+  },
+  {
+   "name": "Philadelphia Latino Arts & Film Festival",
+   "date": "2026-11-15",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "philadelphia-latino-arts-film-festival"
+  },
+  {
+   "name": "Sonoma International Film Festival",
+   "date": "2026-11-15",
+   "label": "Late",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "sonoma-international-film-festival"
+  },
+  {
+   "name": "The Philip K. Dick Film Festival",
+   "date": "2026-11-15",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "the-philip-k-dick-film-festival"
+  },
+  {
+   "name": "WorldFest-Houston International Film Festival",
+   "date": "2026-11-15",
+   "label": "Main",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "worldfest-houston-international-film-festival"
+  },
+  {
+   "name": "WorldFest-Houston Screenplay Competition",
+   "date": "2026-11-15",
+   "label": "Main",
+   "fee": "",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "worldfest-houston-screenplay-competition"
+  },
+  {
    "name": "Cosmic Rays Film Festival",
    "date": "2026-11-16",
    "label": "Final",
@@ -21,6 +384,28 @@
    "bafta": false,
    "final": true,
    "id": "cosmic-rays-film-festival"
+  },
+  {
+   "name": "Stowe Story Labs Narrative Labs",
+   "date": "2026-11-16",
+   "label": "Regular",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "stowe-story-labs-narrative-labs"
+  },
+  {
+   "name": "Sundance Institute Indigenous Program Fellowships",
+   "date": "2026-11-16",
+   "label": "Graton Fellowship",
+   "fee": "Free",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "sundance-institute-indigenous-program-fellowships"
   },
   {
    "name": "Final Girls Berlin Film Festival",
@@ -34,6 +419,28 @@
    "id": "final-girls-berlin-film-festival"
   },
   {
+   "name": "MAC Film Festival",
+   "date": "2026-11-17",
+   "label": "Late",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "mac-film-festival"
+  },
+  {
+   "name": "Rooftop Films Summer Series",
+   "date": "2026-11-17",
+   "label": "Early Bird",
+   "fee": "$20 shorts / $25 features",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "rooftop-films-summer-series"
+  },
+  {
    "name": "Tribeca Festival",
    "date": "2026-11-18",
    "label": "Features Official",
@@ -43,6 +450,17 @@
    "bafta": true,
    "final": false,
    "id": "tribeca-festival"
+  },
+  {
+   "name": "IndieLisboa International Independent Film Festival",
+   "date": "2026-11-18",
+   "label": "Regular",
+   "fee": "\u20ac25 short / \u20ac50 feature (international)",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "indielisboa-international-independent-film-festival"
   },
   {
    "name": "Onion City Experimental Film + Video Festival",
@@ -56,6 +474,28 @@
    "id": "onion-city-experimental-film-video-festival"
   },
   {
+   "name": "Film- und Medienstiftung NRW Film Funding",
+   "date": "2026-11-19",
+   "label": "Feature film production funding",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "film-und-medienstiftung-nrw-film-funding"
+  },
+  {
+   "name": "ISA Fast Track Fellowship (Spring)",
+   "date": "2026-11-19",
+   "label": "Early",
+   "fee": "$59",
+   "type": "Screenplay contest",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "isa-fast-track-fellowship-spring"
+  },
+  {
    "name": "Florida Film Festival",
    "date": "2026-11-20",
    "label": "Late",
@@ -67,6 +507,138 @@
    "id": "florida-film-festival"
   },
   {
+   "name": "Frameline San Francisco International LGBTQ+ Film Festival",
+   "date": "2026-11-20",
+   "label": "Early Bird",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": true,
+   "final": false,
+   "id": "frameline-san-francisco-international-lgbtq-film-festival"
+  },
+  {
+   "name": "LA Shorts International Film Festival",
+   "date": "2026-11-20",
+   "label": "Regular",
+   "fee": "$59",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": true,
+   "final": false,
+   "id": "la-shorts-international-film-festival"
+  },
+  {
+   "name": "Rio de Janeiro International Short Film Festival (Curta Cinema)",
+   "date": "2026-11-20",
+   "label": "Regular",
+   "fee": "\u20ac16",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": true,
+   "final": false,
+   "id": "rio-de-janeiro-international-short-film-festival-curta-cinema"
+  },
+  {
+   "name": "Sheffield DocFest",
+   "date": "2026-11-20",
+   "label": "Early",
+   "fee": "\u00a340 feature / \u00a330 short + VAT",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": true,
+   "final": false,
+   "id": "sheffield-docfest"
+  },
+  {
+   "name": "Format Court Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "format-court-festival"
+  },
+  {
+   "name": "James River Film Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "james-river-film-festival"
+  },
+  {
+   "name": "Luxembourg City Film Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "\u20ac60",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "luxembourg-city-film-festival"
+  },
+  {
+   "name": "Millenium International Documentary Film Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "\u20ac15-\u20ac30",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "millenium-international-documentary-film-festival"
+  },
+  {
+   "name": "Niigata International Animation Film Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "niigata-international-animation-film-festival"
+  },
+  {
+   "name": "Vancouver Island Short Film Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "$25 USD",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "vancouver-island-short-film-festival"
+  },
+  {
+   "name": "I'm Migrant Film Festival",
+   "date": "2026-11-20",
+   "label": "Standard",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "i-m-migrant-film-festival"
+  },
+  {
+   "name": "Puffin Foundation Grants (Film/Video)",
+   "date": "2026-11-20",
+   "label": "Application request form",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "puffin-foundation-grants-film-video"
+  },
+  {
    "name": "Ammar Popular Film Festival",
    "date": "2026-11-21",
    "label": "Final",
@@ -76,6 +648,17 @@
    "bafta": false,
    "final": true,
    "id": "ammar-popular-film-festival"
+  },
+  {
+   "name": "DisOrient Asian American Film Festival of Oregon",
+   "date": "2026-11-21",
+   "label": "Regular",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "disorient-asian-american-film-festival-of-oregon"
   }
  ],
  "total": 60,
