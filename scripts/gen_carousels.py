@@ -8,7 +8,9 @@ caption.txt. Filmmaker craft only per Simon's standing rule.
 """
 import glob
 import os
+import re
 from PIL import Image, ImageDraw, ImageFont
+import designs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W, H = 1080, 1350
@@ -78,47 +80,27 @@ def slide_base():
     return img, ImageDraw.Draw(img)
 
 
-def cover(kicker, head, sub, pages):
-    img, draw = slide_base()
-    chrome(draw, kicker, 1, pages)
-    hsize = fit(draw, head, BODONI, 2, 116)
-    y = (H - int(hsize * 1.06) * len(head) - 180) / 2
-    hf = f(BODONI, hsize, 2)
-    for line in head:
-        center(draw, line, y, hf, INK)
-        y += int(hsize * 1.06)
-    y += 30
-    center(draw, sub, y, f(BODONI, 58, 1), RED)
-    draw.line([(W / 2 - 160, y + 110), (W / 2 + 160, y + 110)], fill=RULE, width=2)
+def cover(kicker, head, sub, pages, design=0):
+    img, draw, p = designs.page(design)
+    top, bottom = designs.frame(draw, design, kicker, f"01 / {pages:02d}", swipe=True)
+    designs.headline_block(draw, design, p, head, sub, [], top, bottom)
     return img
 
 
-def point(kicker, n, pages, title, support):
-    img, draw = slide_base()
-    chrome(draw, kicker, n + 1, pages)
-    nf = f(BODONI, 200, 2)
-    center(draw, str(n), 300, nf, RED)
-    tsize = fit(draw, [title], BODONI, 2, 92)
-    center(draw, title, 610, f(BODONI, tsize, 2), INK)
-    ssize = fit(draw, support, AVENIR, 5, 48)
-    y = 610 + int(tsize * 1.06) + 70
-    draw.line([(W / 2 - 160, y - 34), (W / 2 + 160, y - 34)], fill=RULE, width=2)
-    y += 26
-    sf = f(AVENIR, ssize, 5)
-    for line in support:
-        center(draw, line, y, sf, SOFT)
-        y += int(ssize * 1.5)
+def point(kicker, n, pages, title, support, design=0):
+    img, draw, p = designs.page(design)
+    top, bottom = designs.frame(draw, design, kicker, f"{n + 1:02d} / {pages:02d}", swipe=True)
+    nf = f(BODONI, 170, 2)
+    center(draw, str(n), top + 30, nf, p["accent"])
+    designs.headline_block(draw, design, p, [title], None, support, top + 230, bottom)
     return img
 
 
-def closer(kicker, page, pages):
-    img, draw = slide_base()
-    chrome(draw, kicker, page, pages)
-    center(draw, "Keep this one.", 480, f(BODONI, 110, 2), INK)
-    center(draw, "Save it for the shoot day.", 640, f(BODONI, 56, 1), RED)
-    draw.line([(W / 2 - 160, 760), (W / 2 + 160, 760)], fill=RULE, width=2)
-    tracked(draw, "FOLLOW @PAGE4FILMS", 830, f(AVENIR, 34, 2), INK, tracking=6)
-    center(draw, "New cards Monday, Wednesday and Friday.", 910, f(AVENIR, 38, 5), SOFT)
+def closer(kicker, page, pages, design=0):
+    img, draw, p = designs.page(design)
+    top, bottom = designs.frame(draw, design, kicker, f"{page:02d} / {pages:02d}", swipe=True)
+    designs.headline_block(draw, design, p, ["Keep this one."], "Save it for the shoot day.",
+                           ["Follow @page4films.", "New cards Monday, Wednesday and Friday."], top, bottom)
     return img
 
 
@@ -176,10 +158,12 @@ def carousel(slug, kicker, head, sub, points, caption):
     os.makedirs(out, exist_ok=True)
     for stale in glob.glob(os.path.join(out, "slide_*.png")):
         os.remove(stale)
-    slides = [cover(kicker, head, sub, pages)]
+    m = re.search(r"\d+", slug)
+    design = designs.pick(m.group()) if m else 0
+    slides = [cover(kicker, head, sub, pages, design)]
     for i, (title, support) in enumerate(points, 1):
-        slides.append(point(kicker, i, pages, title, support))
-    slides.append(closer(kicker, pages - 1, pages))
+        slides.append(point(kicker, i, pages, title, support, design))
+    slides.append(closer(kicker, pages - 1, pages, design))
     slides.append(mise_slide(pages))
     for i, s in enumerate(slides, 1):
         s.save(os.path.join(out, f"slide_{i}.png"))

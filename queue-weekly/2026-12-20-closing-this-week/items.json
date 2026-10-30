@@ -1,0 +1,171 @@
+{
+ "rows": [
+  {
+   "name": "Blue Water Film Festival",
+   "date": "2026-12-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "blue-water-film-festival"
+  },
+  {
+   "name": "Comicorto Festival",
+   "date": "2026-12-20",
+   "label": "Final",
+   "fee": "\u20ac5",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "comicorto-festival"
+  },
+  {
+   "name": "FescinePi\u00e9lagos International Short Film Festival",
+   "date": "2026-12-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "fescinepielagos-international-short-film-festival"
+  },
+  {
+   "name": "New Bedford Film Festival",
+   "date": "2026-12-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "new-bedford-film-festival"
+  },
+  {
+   "name": "Ramdam Festival",
+   "date": "2026-12-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "ramdam-festival"
+  },
+  {
+   "name": "InShadow Lisbon Screendance Festival",
+   "date": "2026-12-20",
+   "label": "Regular",
+   "fee": "$35",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "inshadow-lisbon-screendance-festival"
+  },
+  {
+   "name": "BFI Doc Society Fund (Development and RAD)",
+   "date": "2026-12-21",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "bfi-doc-society-fund-development-and-rad"
+  },
+  {
+   "name": "Docudays UA International Human Rights Documentary Film Festival",
+   "date": "2026-12-21",
+   "label": "Final",
+   "fee": "$20 short / $30 feature",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "docudays-ua-international-human-rights-documentary-film-festival"
+  },
+  {
+   "name": "Mountainfilm",
+   "date": "2026-12-22",
+   "label": "Official",
+   "fee": "$50 short / $70 feature",
+   "type": "Festival",
+   "oscar": true,
+   "bafta": false,
+   "final": false,
+   "id": "mountainfilm"
+  },
+  {
+   "name": "Sundance Institute Indigenous Program Fellowships",
+   "date": "2026-12-22",
+   "label": "Native Lab",
+   "fee": "Free",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "sundance-institute-indigenous-program-fellowships"
+  },
+  {
+   "name": "Tropfest",
+   "date": "2026-12-22",
+   "label": "Early bird",
+   "fee": "A$65",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "tropfest"
+  },
+  {
+   "name": "Courtisane Festival",
+   "date": "2026-12-23",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "courtisane-festival"
+  },
+  {
+   "name": "Brooklyn Film Festival",
+   "date": "2026-12-23",
+   "label": "Regular (features)",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "brooklyn-film-festival"
+  },
+  {
+   "name": "Rochester International Film Festival",
+   "date": "2026-12-24",
+   "label": "Early Bird",
+   "fee": "$35",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": false,
+   "id": "rochester-international-film-festival"
+  },
+  {
+   "name": "Hitachi Film Festival",
+   "date": "2026-12-25",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "hitachi-film-festival"
+  }
+ ],
+ "total": 15,
+ "start": "2026-12-20"
+}

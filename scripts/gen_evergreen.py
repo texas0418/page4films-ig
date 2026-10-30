@@ -7,6 +7,7 @@ body sizes so nothing crowds the margins.
 """
 import os
 from PIL import Image, ImageDraw, ImageFont
+import designs
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W, H = 1080, 1350
@@ -99,35 +100,11 @@ def _dest(slug):
 
 
 def build(slug, num, kicker, head, bodyl, sub=None, tone="light", caption=""):
-    t = TONES[tone]
-    img = Image.new("RGB", (W, H), t["bg"])
-    draw = ImageDraw.Draw(img)
-    chrome(draw, kicker, f"NO. {num:03d}", tone)
-
-    hsize = fit(draw, head, BODONI, 2, 118)
-    bsize = fit(draw, bodyl, AVENIR, 5, 54)
-    hh = int(hsize * 1.06) * len(head)
-    sh = int(64 * 1.2) if sub else 0
-    bh = int(bsize * 1.55) * len(bodyl)
-    block = hh + (34 + sh if sub else 0) + 44 + 2 + 92 + bh
-    y = max(240, (H - block) / 2 - 20)
-
-    hf = f(BODONI, hsize, 2)
-    for line in head:
-        center(draw, line, y, hf, t["ink"])
-        y += int(hsize * 1.06)
-    if sub:
-        y += 34
-        center(draw, sub, y, f(BODONI, 62, 1), t["accent"])
-        y += sh
-    y += 44
-    draw.line([(W / 2 - 160, y), (W / 2 + 160, y)], fill=t["rule"], width=2)
-    y += 92
-    bf = f(AVENIR, bsize, 5)
-    bfill = t["body"]
-    for line in bodyl:
-        center(draw, line, y, bf, bfill)
-        y += int(bsize * 1.55)
+    # Rotating designs by card number (Simon 10-29): A, A reversed, B, B reversed. "tone" is ignored.
+    design = designs.pick(num)
+    img, draw, p = designs.page(design)
+    top, bottom = designs.frame(draw, design, kicker, f"NO. {num:03d}")
+    designs.headline_block(draw, design, p, head, sub, bodyl, top, bottom)
 
     out = _dest(f"{num:02d}-{slug}")
     if out is None:
