@@ -45,6 +45,17 @@
    "id": "stuttgart-international-festival-of-animated-film-itfs"
   },
   {
+   "name": "Agenda 14 Short Film Festival",
+   "date": "2026-11-15",
+   "label": "Final",
+   "fee": "LKR 2,000 per film",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "agenda-14-short-film-festival"
+  },
+  {
    "name": "Animocje International Animation Festival",
    "date": "2026-11-15",
    "label": "Final",
@@ -573,6 +584,17 @@
    "id": "james-river-film-festival"
   },
   {
+   "name": "Lielais Kristaps National Film Festival",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "lielais-kristaps-national-film-festival"
+  },
+  {
    "name": "Luxembourg City Film Festival",
    "date": "2026-11-20",
    "label": "Final",
@@ -604,6 +626,17 @@
    "bafta": false,
    "final": true,
    "id": "niigata-international-animation-film-festival"
+  },
+  {
+   "name": "Silent Film Fund",
+   "date": "2026-11-20",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "silent-film-fund"
   },
   {
    "name": "Vancouver Island Short Film Festival",
@@ -661,6 +694,6 @@
    "id": "disorient-asian-american-film-festival-of-oregon"
   }
  ],
- "total": 60,
+ "total": 63,
  "start": "2026-11-15"
 }

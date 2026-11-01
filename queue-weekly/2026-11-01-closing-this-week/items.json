@@ -276,17 +276,6 @@
    "id": "puerto-aventuras-international-film-festival-paiff"
   },
   {
-   "name": "Snake Alley Festival of Film",
-   "date": "2026-11-01",
-   "label": "Early",
-   "fee": "$25 short ($15 student); screenplay $15 ($10 student)",
-   "type": "Festival",
-   "oscar": false,
-   "bafta": false,
-   "final": false,
-   "id": "snake-alley-festival-of-film"
-  },
-  {
    "name": "RiverRun International Film Festival",
    "date": "2026-11-02",
    "label": "Late",
@@ -472,6 +461,17 @@
    "bafta": false,
    "final": true,
    "id": "cph-forum"
+  },
+  {
+   "name": "Fortaleza de Cinema (Festival Internacional de Cinema de Fortaleza)",
+   "date": "2026-11-03",
+   "label": "Final",
+   "fee": "Free",
+   "type": "Festival",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "fortaleza-de-cinema-festival-internacional-de-cinema-de-fortaleza"
   },
   {
    "name": "Let'sdoc Fellowship",
@@ -694,6 +694,6 @@
    "id": "osaka-asian-film-festival"
   }
  ],
- "total": 66,
+ "total": 67,
  "start": "2026-11-01"
 }

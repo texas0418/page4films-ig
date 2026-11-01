@@ -135,23 +135,47 @@ def card(rows, total, start, page=1, pages=2, shown=None):
     return img
 
 
+def handles():
+    """Festival Instagram handles found on their own sites (data/ig-handles.json, built on the server).
+    Only checked handles are used, so a wrong tag never goes out."""
+    try:
+        d = json.load(open(os.path.join(ROOT, "data", "ig-handles.json")))
+    except Exception:
+        return {}
+    return {k: v["handle"] for k, v in d.items() if v.get("handle") and v.get("ok")}
+
+
 def caption(rows, total, start, limit=1700):
     """Instagram allows 2,200 characters including the calendar line and hashtags, so list
     highlights (Oscar/BAFTA and final deadlines first) and point to the cards for the rest."""
     end = start + timedelta(days=6)
     head = [f"Closing this week, {start:%b} {start.day} to {end:%b} {end.day}. Swipe for every deadline.", ""]
     picks = sorted(rows, key=lambda r: (not (r["oscar"] or r["bafta"]), not r["final"], r["date"]))
+    ig = handles()
     lines, used = [], len("\n".join(head))
     foot = ["", "Confirm dates and fees on each festival's own site before you pay."]
     for r in sorted(picks[:12], key=lambda r: (r["date"], r["name"].lower())):
         d = datetime.strptime(r["date"], "%Y-%m-%d")
-        line = f"{d:%a %b} {d.day}: {r['name']} ({'final' if r['final'] else r['label'].lower()} deadline)"
+        tag = f" @{ig[r['id']]}" if r["id"] in ig else ""
+        line = f"{d:%a %b} {d.day}: {r['name']}{tag} ({'final' if r['final'] else r['label'].lower()} deadline)"
         if used + len(line) + 1 + 120 > limit:
             break
         lines.append(line); used += len(line) + 1
     more = total - len(lines)
     if more > 0:
         lines.append(f"Plus {more} more on the cards and the calendar.")
+    # Tag the rest of the week's festivals whose handle we know, as far as the limit allows.
+    shown = {r["id"] for r in picks[:len(lines)]}
+    extra = [f"@{ig[r['id']]}" for r in rows if r["id"] in ig and r["id"] not in shown]
+    if extra:
+        line, room = "Also this week: ", limit - used - 120
+        kept = []
+        for t in extra:
+            if len(line) + sum(len(k) + 1 for k in kept) + len(t) > room:
+                break
+            kept.append(t)
+        if kept:
+            lines += ["", line + " ".join(kept)]
     return "\n".join(head + lines + foot)
 
 

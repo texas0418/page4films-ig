@@ -1,0 +1,1951 @@
+{
+ "2annas-riga-international-short-film-festival": {
+  "handle": "2annasisff",
+  "src": "https://www.2annas.lv",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "48-hour-film-project-washington-dc": {
+  "handle": null,
+  "src": "https://www.48hourfilm.com/dc/48hfp",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "academia-film-olomouc": {
+  "handle": "academia_film_olomouc",
+  "src": "https://www.afo.cz",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "achtung-berlin-film-festival": {
+  "handle": null,
+  "src": "https://achtungberlin.de",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "act-human-rights-film-festival": {
+  "handle": null,
+  "src": "https://actfilmfest.colostate.edu",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "aidc-the-factory-international-pitching-forum": {
+  "handle": "o1",
+  "src": "https://www.aidc.com.au/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "akbank-short-film-festival": {
+  "handle": "akbanksanat",
+  "src": "https://www.akbanksanat.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "alabama-screendance-film-festival": {
+  "handle": null,
+  "src": "https://alabamadancecouncil.org/programs/alabama-dance-festival/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "amazing-animation-festival": {
+  "handle": null,
+  "src": "https://www.amazinganimationfestival.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "amazing-fantasy-fest": {
+  "handle": null,
+  "src": "https://sites.google.com/view/amazingfantasyfest/submit",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "amdocs-american-documentary-and-animation-film-festival": {
+  "handle": null,
+  "src": "https://www.amdocfilmfest.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "ammar-popular-film-festival": {
+  "handle": null,
+  "src": "https://ammarfilm.ir/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "anifilm-international-festival-of-animated-films": {
+  "handle": "anifilmfestival",
+  "src": "https://www.anifilm.cz/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "animal-nature-future-film-festival": {
+  "handle": "animalnaturefuturefilmfestival",
+  "src": "https://www.anfff.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "animocje-international-animation-festival": {
+  "handle": "animocje_festival",
+  "src": "https://www.animocje.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "arizona-international-film-festival": {
+  "handle": "azfilmfestival",
+  "src": "https://filmfestivalarizona.com/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "arizona-underground-film-festival": {
+  "handle": "azundergroundfilmfest",
+  "src": "http://azuff.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "art-of-brooklyn-film-festival": {
+  "handle": "theartofbklyn",
+  "src": "https://www.theartofbrooklyn.org/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "artdocfest-riga": {
+  "handle": "artdocfest",
+  "src": "https://artdocfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "artist-trust-fellowship": {
+  "handle": "artisttrust",
+  "src": "https://artisttrust.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "ashland-independent-film-festival": {
+  "handle": "ashlandfilm",
+  "src": "https://www.ashlandfilm.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "atlanta-film-festival-screenplay-competition": {
+  "handle": "atlantafilmfestival",
+  "src": "https://www.atlantafilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "atx-tv-festival": {
+  "handle": "atxfestival",
+  "src": "https://atxfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "atx-tv-festival-pitch-competition": {
+  "handle": "atxfestival",
+  "src": "https://atxfestival.com/pitch",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bafici-buenos-aires-international-independent-film-festival": {
+  "handle": null,
+  "src": "https://bafici.org",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "banff-world-media-festival": {
+  "handle": "banffmedia",
+  "src": "https://banffmediafestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bbc-writers-open-call": {
+  "handle": "bbcwriters",
+  "src": "https://www.bbc.co.uk/writers/opportunities/open-call",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "behind-the-pine-curtain-film-festival": {
+  "handle": null,
+  "src": "https://limners.art/filmfest/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "beldocs-international-documentary-film-festival": {
+  "handle": "restoran_tri",
+  "src": "https://www.beldocs.rs",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "bell-fund": {
+  "handle": "fondsbellfund",
+  "src": "https://bellfund.ca",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "benson-film-festival": {
+  "handle": "bensonfilmfest",
+  "src": "https://www.bensonfilmfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bergamo-film-meeting": {
+  "handle": "bergamofilmmeeting",
+  "src": "https://www.bergamofilmmeeting.it",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "berlin-international-film-festival-berlinale": {
+  "handle": "berlinale",
+  "src": "https://www.berlinale.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "berlin-music-video-awards": {
+  "handle": "berlinmusicvideoawards",
+  "src": "https://www.berlinmva.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bfi-doc-society-fund-development-and-rad": {
+  "handle": "TheDocSociety",
+  "src": "https://bfi.docsociety.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bfi-flare-london-lgbtqia-film-festival": {
+  "handle": null,
+  "src": "https://www.bfi.org.uk/flare",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "blue-water-film-festival": {
+  "handle": "bluewaterfilmfestival",
+  "src": "https://www.bluewaterfilmfestival.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bluecat-screenplay-competition": {
+  "handle": "bluecatwriters",
+  "src": "https://bluecatscreenplay.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "bogliasco-fellowships": {
+  "handle": null,
+  "src": "https://www.bfny.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "bolzano-film-festival-bozen": {
+  "handle": "bolzanofilmfestivalbozen",
+  "src": "https://www.filmfestival.bz.it",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "boston-scifi-film-festival": {
+  "handle": "bostonscifi",
+  "src": "https://www.bostonscifi.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "boulder-international-film-festival": {
+  "handle": null,
+  "src": "https://biff1.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "british-urban-film-festival-buff": {
+  "handle": "bufilmfest",
+  "src": "https://www.britishurbanfilmfestival.co.uk/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "brooklyn-film-festival": {
+  "handle": "brooklynfilmfestival",
+  "src": "https://www.brooklynfilmfestival.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "buff-malmo-international-children-and-young-people-s-film-festival": {
+  "handle": "buff_malmo",
+  "src": "https://buff.se",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "busan-international-short-film-festival": {
+  "handle": "busanshortfilmfest",
+  "src": "https://www.bisff.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cadence-video-poetry-festival": {
+  "handle": "cadence.video.poetry",
+  "src": "https://www.cadencevideopoetry.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "canadian-film-fest": {
+  "handle": "canfilmfest",
+  "src": "https://canfilmfest.ca",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "canneseries": {
+  "handle": "canneseries",
+  "src": "https://canneseries.com/en/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cartagena-de-indias-international-film-festival-ficci": {
+  "handle": "ficcifestival",
+  "src": "https://www.ficcifestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cedar-rapids-independent-film-festival": {
+  "handle": "crfilmfestival",
+  "src": "https://crifm.org",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "celtic-media-festival": {
+  "handle": "celticmediafest",
+  "src": "https://www.celticmediafestival.co.uk",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "changing-climate-changing-lives-film-festival": {
+  "handle": null,
+  "src": "https://www.ccclfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "charlotte-black-film-festival": {
+  "handle": "charlotteblackfilmfestival",
+  "src": "https://charlotteblackfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "chicago-irish-film-festival": {
+  "handle": "chicagoirishff",
+  "src": "https://chicagoirishfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "chicago-latino-film-festival": {
+  "handle": "chilatinofilm",
+  "src": "https://chicagolatinofilmfestival.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cinema-du-reel": {
+  "handle": "cinemadureel",
+  "src": "https://www.cinemadureel.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cinemasia-film-festival": {
+  "handle": "cinemasianl",
+  "src": "https://cinemasia.nl",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cinestory-tv-retreat-fellowship": {
+  "handle": "cinestoryfoundation",
+  "src": "https://cinestory.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cnc-aide-aux-cinemas-du-monde": {
+  "handle": "le_cnc",
+  "src": "https://www.cnc.fr",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "comicorto-festival": {
+  "handle": "_teatrodellajuta_",
+  "src": "https://accademiadellajuta.it/comicorto-2027/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "coney-island-film-festival": {
+  "handle": "coneyislandfilmfest",
+  "src": "https://coneyislandfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cookies-comedy-film-festival": {
+  "handle": "CookiesAndComedyFF",
+  "src": "https://cookiesfilmfest.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cortisonici": {
+  "handle": "cortisonici_film_festival",
+  "src": "https://cortisonici.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cosmic-rays-film-festival": {
+  "handle": "cosmicraysfilmfest",
+  "src": "https://cosmicraysfilmfest.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "courtisane-festival": {
+  "handle": null,
+  "src": "https://www.courtisane.be",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "cph-dox": {
+  "handle": null,
+  "src": "https://cphdox.dk",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "cph-forum": {
+  "handle": null,
+  "src": "https://cphdox.dk/cphforum/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "creative-world-awards-screenwriting-competition": {
+  "handle": null,
+  "src": "https://www.creativeworldawards.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "curacao-international-film-festival": {
+  "handle": "curacaoiff",
+  "src": "https://www.curacaoiff.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "cyprus-film-days-international-festival": {
+  "handle": "cyprusfilmdays",
+  "src": "https://www.cyprusfilmdays.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "d-a-barcelona-film-festival": {
+  "handle": "dafilmfestival",
+  "src": "https://www.dafilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "daad-artists-in-berlin-program-film": {
+  "handle": null,
+  "src": "https://www.berliner-kuenstlerprogramm.de/en/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "dawson-city-international-short-film-festival": {
+  "handle": "kiacyukon",
+  "src": "https://www.dawsonfilmfest.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "dc-independent-film-festival": {
+  "handle": "dcindiefilmfestival",
+  "src": "https://dciff-indie.org",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "delhi-international-film-festival-diff": {
+  "handle": "poetryramkishoreparcha",
+  "src": "http://www.delhiinternationalfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "denton-black-film-festival": {
+  "handle": "dentonbff",
+  "src": "https://dentonbff.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "diagonale-festival-of-austrian-film": {
+  "handle": "diagonale_at",
+  "src": "https://www.diagonale.at",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "digi60-filmmakers-festival": {
+  "handle": "digi.60",
+  "src": "https://www.digi60.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "disorient-asian-american-film-festival-of-oregon": {
+  "handle": "disorientfilm",
+  "src": "https://disorientfilm.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "docaviv-international-documentary-film-festival": {
+  "handle": "docaviv",
+  "src": "https://www.docaviv.co.il",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "docedge-kolkata-asian-forum-for-documentary": {
+  "handle": null,
+  "src": "https://docresi.org/programmes/docedge-kolkata",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "docsbarcelona": {
+  "handle": "docsbarcelona",
+  "src": "https://www.docsbarcelona.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "docudays-ua-international-human-rights-documentary-film-festival": {
+  "handle": null,
+  "src": "https://docudays.ua",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "docville-international-documentary-film-festival": {
+  "handle": "docville_be",
+  "src": "https://www.docville.be",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "dok-fest-munchen": {
+  "handle": "dokfest",
+  "src": "https://www.dokfest-muenchen.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "dokumentarfilmwoche-hamburg": {
+  "handle": "dokumentarfilmwochehamburg",
+  "src": "https://www.dokfilmwoche.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "dragonfly-international-film-festival": {
+  "handle": "dragonflyiff",
+  "src": "https://www.dragonflyiff.co.uk",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "durban-international-film-festival": {
+  "handle": null,
+  "src": "https://ccadiff.ukzn.ac.za",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "ecozine-international-film-and-environment-festival": {
+  "handle": "ecozinefilmfestival",
+  "src": "https://festivalecozine.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "ecrans-mixtes": {
+  "handle": "festival_ecransmixtes",
+  "src": "https://www.festival-em.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "environmental-film-festival-in-the-nation-s-capital": {
+  "handle": "dceff_org",
+  "src": "https://dceff.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "escine-short-film-festival-festival-de-cortos-escine": {
+  "handle": null,
+  "src": "https://escinesv.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "european-media-art-festival-emaf": {
+  "handle": "european.media.art.festival",
+  "src": "https://www.emaf.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "experiments-in-cinema": {
+  "handle": null,
+  "src": "https://www.experimentsincinema.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "fantasia-international-film-festival": {
+  "handle": "fantasiafestival",
+  "src": "https://fantasiafestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "fantasporto-oporto-international-film-festival": {
+  "handle": "fantasportofest",
+  "src": "https://www.fantasporto.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "fastnet-film-festival": {
+  "handle": "fastnetfilmfestival",
+  "src": "https://www.fastnetfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "fecich-chilean-film-festival": {
+  "handle": "fecich.cl",
+  "src": "https://fecich.cl",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "fescinepielagos-international-short-film-festival": {
+  "handle": "fescinepielagos",
+  "src": "https://www.fescinepielagos.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "festival-courts-d-un-soir": {
+  "handle": "courtsdunsoir",
+  "src": "https://www.courtsdunsoir.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "festival-de-cine-nacional-de-nuble": {
+  "handle": "nublecine",
+  "src": "https://nublecine.cl",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "festival-du-premier-film-d-annonay": {
+  "handle": "annonaypremierfilm",
+  "src": "https://www.annonaypremierfilm.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "festival-ecra": {
+  "handle": "festivalecra",
+  "src": "https://www.festivalecra.com.br",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "festival-internacional-de-cine-de-lanzarote": {
+  "handle": "festivalcinelanzarote",
+  "src": "https://www.festivaldecinedelanzarote.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "festival-international-du-film-pour-enfants-de-montreal-fifem": {
+  "handle": null,
+  "src": "https://fifem.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "festival-national-du-film-d-animation": {
+  "handle": null,
+  "src": "https://www.afca.asso.fr",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "festival-travelling": {
+  "handle": "clairobscur.asso.rennes",
+  "src": "https://www.clairobscur.info/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "figra-festival-international-du-grand-reportage-d-actualite": {
+  "handle": "figra_festival",
+  "src": "https://www.figra.fr",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "film-independent-documentary-lab": {
+  "handle": "filmindependent",
+  "src": "https://www.filmindependent.org/programs/artist-development/documentary-lab/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "film-und-medienstiftung-nrw-film-funding": {
+  "handle": "filmedienrw",
+  "src": "https://www.filmstiftung.de/en/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "filmfest-bremen": {
+  "handle": "filmfestbremen",
+  "src": "https://www.filmfestbremen.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "filmfest-dresden": {
+  "handle": "filmfestdresden",
+  "src": "https://www.filmfest-dresden.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "final-girls-berlin-film-festival": {
+  "handle": "finalgirlsfilmfest",
+  "src": "https://www.finalgirlsberlin.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "flamin-productions-film-london": {
+  "handle": "film_london",
+  "src": "https://filmlondon.org.uk/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "flatpack-festival": {
+  "handle": null,
+  "src": "https://flatpackfestival.org.uk/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "flickerfest-international-short-film-festival": {
+  "handle": "flickerfest",
+  "src": "https://www.flickerfest.com.au",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "flimmern-rauschen-munich-youth-film-festival": {
+  "handle": "flimmernundrauschen",
+  "src": "https://www.bkjff.de/muenchen/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "florida-film-festival": {
+  "handle": "floridafilmfest",
+  "src": "https://floridafilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "format-court-festival": {
+  "handle": null,
+  "src": "https://www.formatcourt.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "fort-lauderdale-international-film-festival-fliff": {
+  "handle": "savorcinema",
+  "src": "https://fliff.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "frameline-san-francisco-international-lgbtq-film-festival": {
+  "handle": "framelinefest",
+  "src": "https://www.frameline.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "franklin-film-festival": {
+  "handle": null,
+  "src": "https://franklinfilmfestival.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "fresh-film-festival": {
+  "handle": "freshfilm.ie",
+  "src": "https://freshfilm.ie",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "friss-hus-budapest-international-short-film-festival": {
+  "handle": "frisshusbudapest",
+  "src": "https://www.frisshusbudapest.com/en",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "full-frame-documentary-film-festival": {
+  "handle": "fullframefest",
+  "src": "https://www.fullframefest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "galway-film-fleadh": {
+  "handle": "galwayfilm",
+  "src": "https://www.galwayfilmfleadh.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "garden-state-film-festival": {
+  "handle": "gardenstatefilmfestival",
+  "src": "https://www.gsff.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "gerardmer-international-fantastic-film-festival": {
+  "handle": "festivaldegerardmer",
+  "src": "https://festival-gerardmer.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "gesher-multicultural-film-fund": {
+  "handle": null,
+  "src": "https://gesherfilmfund.org.il/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "glowflare-short-film-festival": {
+  "handle": "GFShortFestUK",
+  "src": "https://www.glowflareshortfestival.com",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "go-short-international-short-film-festival-nijmegen": {
+  "handle": "goshort",
+  "src": "https://www.goshort.nl",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "goeast-festival-of-central-and-eastern-european-film": {
+  "handle": "goeastff",
+  "src": "https://www.filmfestival-goeast.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "golden-rhyton-documentary-and-animation-festival": {
+  "handle": "nfc.bg",
+  "src": "https://zlatenriton.bg",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "goldener-spatz-german-children-s-media-festival": {
+  "handle": "goldenerspatz",
+  "src": "https://goldenerspatz.de/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "green-screen-environmental-film-festival": {
+  "handle": null,
+  "src": "https://greenscreen.film",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "grenzland-filmtage-selb": {
+  "handle": "grenzland_filmtage_selb",
+  "src": "https://grenzlandfilmtage-selb.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "guadalajara-construye": {
+  "handle": "ficg",
+  "src": "https://ficg.mx/guadalajara-construye-2027/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "hitachi-film-festival": {
+  "handle": null,
+  "src": "https://cinemasunrise-hitachi.com/hitachi-eigasai-2027/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "hong-kong-asia-film-financing-forum-haf": {
+  "handle": null,
+  "src": "https://industry.hkiff.org.hk/haf/introduction",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "hong-kong-international-film-festival": {
+  "handle": "HKIFFS",
+  "src": "https://www.hkiff.org.hk",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "hory-a-mesto-mountains-and-city": {
+  "handle": "horyamesto",
+  "src": "https://www.horyamesto.sk/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "hot-docs-canadian-international-documentary-festival": {
+  "handle": "hotdocs_",
+  "src": "https://hotdocs.ca",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "hot-docs-forum": {
+  "handle": "hotdocs_",
+  "src": "https://hotdocs.ca/industry/conference/hot-docs-forum/submit-forum",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "houston-green-films-festival-wild-about-houston": {
+  "handle": "cechtx",
+  "src": "https://cechouston.org/greenfilms/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "i-m-migrant-film-festival": {
+  "handle": "_art_forward_",
+  "src": "https://www.imff.co.uk",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "ikebukuro-mirai-international-film-festival": {
+  "handle": null,
+  "src": "https://miraifilmfes.tokyo",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "indielisboa-international-independent-film-festival": {
+  "handle": null,
+  "src": "https://indielisboa.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "inshadow-lisbon-screendance-festival": {
+  "handle": "inshadow.festival",
+  "src": "https://www.inshadowfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "inside-out-2slgbtq-film-festival": {
+  "handle": "insideoutfestival",
+  "src": "https://insideout.ca",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-black-film-festival": {
+  "handle": "ibffnashville",
+  "src": "https://www.ibffevents.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-film-festival-assen": {
+  "handle": "filmfestivalassen",
+  "src": "https://filmfestivalassen.nl",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-film-festival-of-panama-iff-panama": {
+  "handle": null,
+  "src": "https://iffpanama.ong",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "international-kolkata-short-film-festival-iksff": {
+  "handle": "kolkatatvonline",
+  "src": "https://www.iksff.co.in/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-ocean-film-festival": {
+  "handle": "intloceanfilmfest",
+  "src": "https://intloceanfilmfest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-queer-women-of-color-film-festival": {
+  "handle": "qwocmap",
+  "src": "https://www.qwocmap.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-turkish-film-festival-frankfurt": {
+  "handle": "turkfilmfestivalifrankfurt",
+  "src": "https://www.turkfilmfestival.de/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "international-women-s-film-festival-dortmund-cologne": {
+  "handle": "frauenfilmfest",
+  "src": "https://www.frauenfilmfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "interrobang-film-festival": {
+  "handle": null,
+  "src": "https://www.desmoinesartsfestival.org/film",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "isa-fast-track-fellowship-spring": {
+  "handle": "networkisa",
+  "src": "https://www.networkisa.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "it-s-all-true-international-documentary-film-festival": {
+  "handle": "etudoverdadeoficial",
+  "src": "https://etudoverdade.com.br/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "itinerances-ales-film-festival": {
+  "handle": "itinerances_ales",
+  "src": "https://itinerances.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "jaipur-international-film-festival": {
+  "handle": "jaipurfilmfestival",
+  "src": "https://www.jiffindia.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "james-river-film-festival": {
+  "handle": "poemuseum",
+  "src": "https://www.jamesriverfilm.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "joan-bressler-set-in-philadelphia-screenwriting-competition": {
+  "handle": "gpfophilly",
+  "src": "https://film.org/sip-screenwriting-competition/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "jose-ignacio-international-film-festival-jiiff": {
+  "handle": "jiiff_festival",
+  "src": "https://www.joseignaciofilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "kidfilm-family-festival": {
+  "handle": null,
+  "src": "https://www.usafilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "kinetoscope-international-screendance-film-festival": {
+  "handle": "thewestsidetheater",
+  "src": "https://www.thewestsidetheater.com/kinetoscope",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "kingston-canadian-film-festival": {
+  "handle": null,
+  "src": "https://kingcanfilmfest.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "kitakyushu-international-film-festival": {
+  "handle": "KIFF_KITAKYUSHU",
+  "src": "https://kitakyushu-kiff.jp",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "krakow-film-festival": {
+  "handle": "krakowfilmfestival",
+  "src": "https://www.krakowfilmfestival.pl/en/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "kristiansand-international-children-s-film-festival": {
+  "handle": "barnefilmfestivalen",
+  "src": "https://barnefilmfestivalen.no",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "la-fila-short-film-festival": {
+  "handle": null,
+  "src": "https://www.lafila.org",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "la-shorts-international-film-festival": {
+  "handle": "lashortsfest",
+  "src": "https://lashortsfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "let-sdoc-fellowship": {
+  "handle": "docresi",
+  "src": "https://docresi.org/programmes/letsdoc-fellowship",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "love-your-shorts-film-festival": {
+  "handle": "loveyourshorts",
+  "src": "https://loveyourshorts.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "lower-east-side-film-festival": {
+  "handle": "lesfilmfestival",
+  "src": "https://www.lesfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "luxembourg-city-film-festival": {
+  "handle": "luxfilmfest",
+  "src": "https://www.luxfilmfest.lu",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "luxor-african-film-festival": {
+  "handle": "luxorafricanfilmfestival",
+  "src": "https://www.luxorafricanfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "mac-film-festival": {
+  "handle": "mediaartscouncil",
+  "src": "https://www.mediaartscouncil.org/macfilmfestival",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "magnolia-independent-film-festival": {
+  "handle": "magfilmfest",
+  "src": "https://www.magnoliafilmfest.com/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "malaga-film-festival": {
+  "handle": "festivalmalaga",
+  "src": "https://festivaldemalaga.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "malmo-arab-film-festival": {
+  "handle": "maffswe",
+  "src": "https://maffswe.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "mammoth-lakes-film-festival": {
+  "handle": null,
+  "src": "https://www.mammothlakesfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "manchester-film-festival": {
+  "handle": null,
+  "src": "https://manchesterfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "mardi-gras-film-festival": {
+  "handle": "queerscreen",
+  "src": "https://queerscreen.org.au/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "mbt-film-festival-protecting-lives-together": {
+  "handle": null,
+  "src": "https://mbt-filmfes.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "melbourne-international-film-festival": {
+  "handle": "melbfilmfest",
+  "src": "https://miff.com.au",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "miami-film-festival": {
+  "handle": "miamifilm",
+  "src": "https://miamifilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "miami-short-film-festival": {
+  "handle": null,
+  "src": "https://www.miamishortfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "midwest-film-festival": {
+  "handle": "midwestfilm",
+  "src": "https://www.midwestfilm.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "midwest-weirdfest": {
+  "handle": null,
+  "src": "http://www.midwestweirdfest.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "millenium-international-documentary-film-festival": {
+  "handle": "milleniumfest",
+  "src": "https://festivalmillenium.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "minikino-film-week": {
+  "handle": "minikinofilmweek",
+  "src": "https://minikino.org/filmweek/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "mirabile-dictu-international-catholic-film-festival": {
+  "handle": null,
+  "src": "https://www.mirabiledictu-icff.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "missouri-stories-scriptwriting-fellowship": {
+  "handle": "mofilmoffice",
+  "src": "https://mofilm.org/film-community/scriptwriting-fellowship-competition/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "monstra-lisbon-animated-film-festival": {
+  "handle": "festival_monstra",
+  "src": "https://monstrafestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "mountainfilm": {
+  "handle": "mountainfilm",
+  "src": "https://www.mountainfilm.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "movies-that-matter-festival": {
+  "handle": "moviesthatmatterfestival",
+  "src": "https://moviesthatmatter.nl/en/festival",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "mpumalanga-international-film-festival-miff": {
+  "handle": "miffsouthafrica",
+  "src": "https://www.miff.co.za/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "music-cinema-marseille-international-short-film-festival": {
+  "handle": "musicinema.marseille",
+  "src": "https://www.music-cinema.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "nakanoshima-film-festival": {
+  "handle": "nakanoshima.ff",
+  "src": "http://www.nakanoshima.net/eigasai/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "nantucket-film-festival": {
+  "handle": "nantucketfilmfestival",
+  "src": "https://nantucketfilmfestival.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "national-film-festival-for-talented-youth-nffty": {
+  "handle": "nfftyfilm",
+  "src": "https://www.nffty.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "neisse-film-festival": {
+  "handle": "neissefilmfest",
+  "src": "https://www.neissefilmfestival.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "new-bedford-film-festival": {
+  "handle": "nbfilmfest",
+  "src": "https://www.newbedfordfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "new-york-indian-film-festival": {
+  "handle": "nyindianfilmfest",
+  "src": "https://nyiff.us",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "new-york-international-children-s-film-festival": {
+  "handle": "nyicff",
+  "src": "https://nyicff.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "nickel-independent-film-festival": {
+  "handle": "nickelfestival",
+  "src": "https://nickelfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "niigata-international-animation-film-festival": {
+  "handle": "niaff2023",
+  "src": "https://niigata-iaff.net",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "no-man-s-land-film-festival": {
+  "handle": "nomanslandfilmfestival",
+  "src": "https://nomanslandfilmfestival.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "no-reason-short-film-festival": {
+  "handle": "noreasonshortfilmfestival",
+  "src": "https://www.noreasonshortfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "northern-virginia-international-film-festival-nova-fest": {
+  "handle": "thenovafest",
+  "src": "https://www.novafilmfest.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "nzfc-feature-film-production-investment": {
+  "handle": "nzfilm",
+  "src": "https://www.nzfilm.co.nz/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "omaha-film-festival": {
+  "handle": "omahafilmfest",
+  "src": "https://omahafilmfestival.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "one-world-international-human-rights-documentary-film-festival": {
+  "handle": "jedensvetcz",
+  "src": "https://www.oneworld.cz",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "one-world-romania": {
+  "handle": "oneworldromania",
+  "src": "https://www.oneworld.ro",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "onion-city-experimental-film-video-festival": {
+  "handle": "onioncityfilmfest",
+  "src": "https://www.onioncityfilmfest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "open-city-documentary-festival": {
+  "handle": "opencitydocs",
+  "src": "https://opencitylondon.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "oregon-media-arts-fellowship": {
+  "handle": null,
+  "src": "https://www.oregon.gov/biz/aboutus/artscommission/grants/forindividualartists/media-arts-fellowship/Pages/default.aspx",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "osaka-asian-film-festival": {
+  "handle": "osakaasianfilmfestival",
+  "src": "https://oaff.jp/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "ostend-film-festival": {
+  "handle": "filmfestivaloostende",
+  "src": "https://filmfestivaloostende.be",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "overlook-film-festival": {
+  "handle": "overlookfilmfest",
+  "src": "https://www.overlookfilmfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "panorama-internacional-coisa-de-cinema": {
+  "handle": null,
+  "src": "https://panorama.coisadecinema.com.br",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "peninsula-film-festival": {
+  "handle": "peninsulafilmfestival",
+  "src": "https://peninsulafilmfestival.com.au",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "philadelphia-latino-arts-film-festival": {
+  "handle": "phlatinfilmfest",
+  "src": "https://www.phlaff.org",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "philadelphia-youth-film-festival": {
+  "handle": "phillyyouthfilmfest",
+  "src": "https://www.phyff.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "phoenix-film-festival": {
+  "handle": "phoenixfilmfestival",
+  "src": "https://www.phoenixfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "poetryfilmtage-weimar-poetry-film-award": {
+  "handle": "poetryfilmtage",
+  "src": "https://poetryfilmtage.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "pordenone-docs-fest-le-voci-del-documentario": {
+  "handle": "pordenonedocsfest",
+  "src": "https://www.pordenonedocsfest.it/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "princeton-environmental-film-festival": {
+  "handle": "peff.ppl",
+  "src": "https://princetonlibrary.org/events/peff/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "puerto-aventuras-international-film-festival-paiff": {
+  "handle": null,
+  "src": "https://www.pafilmfestival.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "puffin-foundation-grants-film-video": {
+  "handle": "puffinculturalforum",
+  "src": "https://www.puffinfoundation.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "raindance-film-festival": {
+  "handle": "raindancefilmfestival",
+  "src": "https://raindance.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "rajasthan-international-film-festival": {
+  "handle": "riffjaipur",
+  "src": "https://riffjaipur.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "ramdam-festival": {
+  "handle": "tournai.ramdam.festival",
+  "src": "https://www.ramdamfestival.be",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "rec-film-festival": {
+  "handle": null,
+  "src": "https://recfilmfestival.it/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "reedy-reels-film-festival": {
+  "handle": "reedyreels",
+  "src": "https://reedyreels.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "reel-black-film-fest": {
+  "handle": "kcpt",
+  "src": "https://www.kansascitypbs.org/reelblack/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "regard-saguenay-international-short-film-festival": {
+  "handle": "festivalregard",
+  "src": "https://festivalregard.com/en/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "regensburg-short-film-week": {
+  "handle": null,
+  "src": "https://www.kurzfilmwoche.de",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "rendez-vous-quebec-cinema": {
+  "handle": "quebeccinema",
+  "src": "https://rendez-vous.quebeccinema.ca",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "rio-de-janeiro-international-short-film-festival-curta-cinema": {
+  "handle": "curtacinema",
+  "src": "https://curtacinema.com.br",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "river-valley-film-festival": {
+  "handle": "rivervalleyfilmfestival",
+  "src": "https://www.lycomingarts.org/RiverValleyFilmFestival",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "riverrun-international-film-festival": {
+  "handle": "17841401365964705",
+  "src": "https://riverrunfilm.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "rochester-international-film-festival": {
+  "handle": "rocfilmfest",
+  "src": "https://rochesterfilmfest.org",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "roma-creative-contest": {
+  "handle": "romacreativecontest",
+  "src": "https://romacreativecontest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "rooftop-films-summer-series": {
+  "handle": "rooftopfilms",
+  "src": "https://rooftopfilms.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "roze-filmdagen-amsterdam": {
+  "handle": "rozefilmdagen",
+  "src": "https://www.rozefilmdagen.nl",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "san-francisco-greek-film-festival": {
+  "handle": "sfgreekfilmfest",
+  "src": "https://grfilm.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "san-luis-obispo-international-film-festival": {
+  "handle": "slofilmfest",
+  "src": "https://www.slofilmfest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "santa-barbara-international-film-festival": {
+  "handle": "officialsbiff",
+  "src": "https://sbiff.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "saudi-film-festival": {
+  "handle": null,
+  "src": "https://en.saudifilmfestival.org",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "script-pipeline-screenwriting-contest": {
+  "handle": null,
+  "src": "https://scriptpipeline.com",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "scriptapalooza-screenplay-competition": {
+  "handle": "scriptapalooza",
+  "src": "https://www.scriptapalooza.com/home",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "seattle-asian-american-film-festival": {
+  "handle": "seattleaaff",
+  "src": "https://www.seattleaaff.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "seattle-international-film-festival-siff": {
+  "handle": "siffnews",
+  "src": "https://www.siff.net",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sedona-international-film-festival": {
+  "handle": "sedonafilmfestival",
+  "src": "https://sedonafilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sedona-international-film-festival-screenplay-competition": {
+  "handle": "sedonafilmfestival",
+  "src": "https://sedonafilmfestival.com/screenplay-competition/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "seisho-cinema-festival": {
+  "handle": null,
+  "src": "http://seishocinemaclub.sakura.ne.jp",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "seoul-29-second-film-festival": {
+  "handle": "29sfilm_official",
+  "src": "http://www.29sfilm.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "series-mania": {
+  "handle": "seriesmania",
+  "src": "https://seriesmania.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "series-mania-forum": {
+  "handle": "seriesmania",
+  "src": "https://seriesmania.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "series-mania-writers-campus": {
+  "handle": "seriesmania",
+  "src": "https://seriesmania.com/institute/en/program/writers-campus/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "seriesfest": {
+  "handle": "seriesfest",
+  "src": "https://seriesfest.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sguardi-altrove-film-festival": {
+  "handle": "sguardialtrove",
+  "src": "https://www.sguardialtrovefilmfestival.it",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sheffield-adventure-film-festival-shaff": {
+  "handle": "sheffieldadventure",
+  "src": "https://www.shaff.co.uk",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sheffield-docfest": {
+  "handle": "sheffdocfest",
+  "src": "https://www.sheffdocfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "short-circuit-film-festival": {
+  "handle": "cinevic_filmmakers",
+  "src": "https://cinevic.ca/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "short-sweet-film-fest": {
+  "handle": "short.sweet.film.fest",
+  "src": "https://shortsweetfilmfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "smile-international-film-festival-for-children-and-youth-siffcy": {
+  "handle": "siffcy",
+  "src": "https://www.siffcy.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "snake-alley-festival-of-film": {
+  "handle": "snaffiowa",
+  "src": "https://www.snakealleyfestivaloffilm.com",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "snowdance-independent-film-festival": {
+  "handle": "snowdancefestival",
+  "src": "https://www.snowdance.net",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sofia-international-film-festival": {
+  "handle": null,
+  "src": "https://www.siff.bg",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "sonoma-international-film-festival": {
+  "handle": "sonomafilmfest",
+  "src": "https://sonomafilmfest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "st-kilda-film-festival": {
+  "handle": null,
+  "src": "https://www.stkildafilmfestival.com.au",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "stage-32-search-for-new-blood-screenwriting-contest": {
+  "handle": "stage32",
+  "src": "https://www.stage32.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "stockfish-film-festival": {
+  "handle": "stockfishfest",
+  "src": "https://stockfishfestival.is",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "stowe-story-labs-narrative-labs": {
+  "handle": "stowestorylabs",
+  "src": "https://stowestorylabs.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "straight-8": {
+  "handle": "straight_8_",
+  "src": "https://www.straight8.net",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "stuttgart-international-festival-of-animated-film-itfs": {
+  "handle": "itfs_festival_stuttgart",
+  "src": "https://www.itfs.de",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sundance-institute-indigenous-program-fellowships": {
+  "handle": "sundanceorg",
+  "src": "https://www.sundance.org/programs/indigenous-program/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "sunrise-film-festival": {
+  "handle": "sunrisefilmfest",
+  "src": "https://sunrisefilmfestival.co.uk",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "swiss-youth-film-festival-schweizer-jugendfilmtage": {
+  "handle": "jugendfilmtage",
+  "src": "https://jugendfilmtage.ch",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "tag-queer-shorts-festival": {
+  "handle": null,
+  "src": "https://tagqsf.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "tamba-sasayama-video-grand-prix": {
+  "handle": null,
+  "src": "https://tambasasayamadb.sasayama.jp/v-taishou/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "tampere-film-festival": {
+  "handle": "tamperefilmfestival",
+  "src": "https://tamperefilmfestival.fi/en/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "taos-film-festival": {
+  "handle": "taosff",
+  "src": "https://taosff.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "tempo-documentary-festival": {
+  "handle": "tempofestival",
+  "src": "https://tempofestival.se",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "the-philip-k-dick-film-festival": {
+  "handle": "philipkdickfest",
+  "src": "https://www.thephilipkdickfilmfestival.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "thessaloniki-agora": {
+  "handle": "filmfestivalgr",
+  "src": "https://www.filmfestival.gr",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "thessaloniki-international-documentary-festival": {
+  "handle": "filmfestivalgr",
+  "src": "https://www.filmfestival.gr/en/tidf/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "thunder-bay-international-film-festival": {
+  "handle": "friendsofthunderbay",
+  "src": "https://thunderbayfriends.org/film-festival/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "torinofilmlab-featurelab": {
+  "handle": null,
+  "src": "https://www.torinofilmlab.it",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "torinofilmlab-scriptlab": {
+  "handle": null,
+  "src": "https://www.torinofilmlab.it/labs/scriptlab---story-editing",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "torinofilmlab-serieslab": {
+  "handle": null,
+  "src": "https://www.torinofilmlab.it/labs/serieslab",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "toronto-arab-film-festival": {
+  "handle": "torontoarabfilm",
+  "src": "https://arabfilm.ca",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "tosketchfest-film-festival": {
+  "handle": "tosketchfest",
+  "src": "https://torontosketchfest.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "tribeca-festival": {
+  "handle": "tribeca",
+  "src": "https://tribecafilm.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "troms-international-film-festival": {
+  "handle": "tromsofilmfest",
+  "src": "https://www.tiff.no",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "tropfest": {
+  "handle": "tropfest",
+  "src": "https://www.tropfest.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "true-false-film-fest": {
+  "handle": "truefalsefilmfest",
+  "src": "https://truefalse.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "uruguay-international-film-festival-cinemateca-uruguaya": {
+  "handle": "cafe_ladiaria",
+  "src": "https://festival.cinemateca.org.uy",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "usa-film-festival": {
+  "handle": null,
+  "src": "https://www.usafilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "valkyrie-international-film-festival": {
+  "handle": null,
+  "src": "https://www.valkyriefilmfest.com/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "vancouver-island-short-film-festival": {
+  "handle": "visff",
+  "src": "https://visff.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "vaughan-international-film-festival": {
+  "handle": "vaughanfilmfestival",
+  "src": "https://www.vaughanfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "vero-beach-film-festival": {
+  "handle": null,
+  "src": "https://vbfilmfest.org/",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "vicscreen-originate-slate": {
+  "handle": "wearevicscreen",
+  "src": "https://vicscreen.vic.gov.au/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "visions-du-reel": {
+  "handle": "visionsdureel",
+  "src": "https://www.visionsdureel.ch/en/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "wailuku-film-festival": {
+  "handle": "wailukufilmfestival",
+  "src": "https://www.wailukufilm.com/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "west-chester-film-festival": {
+  "handle": "wcfilmfestival",
+  "src": "https://westchesterfilmfestival.com/",
+  "at": "2026-11-01",
+  "ok": true,
+  "note": "abbreviation checked by hand 2026-11-01"
+ },
+ "winter-film-festival": {
+  "handle": "winterfilmfestNYC",
+  "src": "https://winterfilmfest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "wisconsin-film-festival": {
+  "handle": null,
+  "src": "https://wifilmfest.org",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "women-in-film-x-the-black-list-episodic-lab": {
+  "handle": "womeninfilmla",
+  "src": "https://womeninfilm.org/programs/writing/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "worldfest-houston-international-film-festival": {
+  "handle": "worldfesthouston",
+  "src": "https://www.worldfest.org/",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "worldfest-houston-screenplay-competition": {
+  "handle": "worldfesthouston",
+  "src": "https://www.worldfest.org",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "writemovies-writing-contest": {
+  "handle": "writemovies",
+  "src": "https://writemovies.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "yamagata-international-documentary-film-festival": {
+  "handle": null,
+  "src": "https://www.yidff.jp/home-e.html",
+  "at": "2026-11-01",
+  "ok": false
+ },
+ "yorkton-film-festival": {
+  "handle": "yorktonfilm",
+  "src": "https://yorktonfilm.com",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "zagrebdox-international-documentary-film-festival": {
+  "handle": "zagrebdox",
+  "src": "https://www.zagrebdox.net",
+  "at": "2026-11-01",
+  "ok": true
+ },
+ "zeitgeist-minnesota-film-festival": {
+  "handle": "minnesotafilmfestival",
+  "src": "https://zeitgeistarts.com/zmff/",
+  "at": "2026-11-01",
+  "ok": true
+ }
+}

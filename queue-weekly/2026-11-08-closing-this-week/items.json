@@ -232,6 +232,17 @@
    "id": "panorama-internacional-coisa-de-cinema"
   },
   {
+   "name": "Peru Ministry of Culture Economic Incentives for Film and Audiovisual (DAFO)",
+   "date": "2026-11-13",
+   "label": "Final",
+   "fee": "",
+   "type": "Fund or lab",
+   "oscar": false,
+   "bafta": false,
+   "final": true,
+   "id": "peru-ministry-of-culture-economic-incentives-for-film-and-audiovisual-dafo"
+  },
+  {
    "name": "Tempo Documentary Festival",
    "date": "2026-11-13",
    "label": "Final",
@@ -265,6 +276,6 @@
    "id": "international-black-film-festival"
   }
  ],
- "total": 24,
+ "total": 25,
  "start": "2026-11-08"
 }
