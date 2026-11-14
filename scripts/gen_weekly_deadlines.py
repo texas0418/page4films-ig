@@ -153,7 +153,7 @@ def caption(rows, total, start, limit=1700):
     picks = sorted(rows, key=lambda r: (not (r["oscar"] or r["bafta"]), not r["final"], r["date"]))
     ig = handles()
     lines, used = [], len("\n".join(head))
-    foot = ["", "Confirm dates and fees on each festival's own site before you pay."]
+    foot = ["", f"Every deadline, free: {CAL}", "Confirm dates and fees on each festival's own site before you pay."]
     for r in sorted(picks[:12], key=lambda r: (r["date"], r["name"].lower())):
         d = datetime.strptime(r["date"], "%Y-%m-%d")
         tag = f" @{ig[r['id']]}" if r["id"] in ig else ""
