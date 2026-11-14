@@ -166,7 +166,13 @@ def caption(rows, total, start, limit=1700):
         lines.append(f"Plus {more} more on the cards and the calendar.")
     # Tag the rest of the week's festivals whose handle we know, as far as the limit allows.
     shown = {r["id"] for r in picks[:len(lines)]}
-    extra = [f"@{ig[r['id']]}" for r in rows if r["id"] in ig and r["id"] not in shown]
+    # One tag per handle: a festival with two listings (or a handle already in a line above) is tagged once.
+    seen = {f"@{ig[i]}" for i in shown if i in ig}
+    extra = []
+    for r in rows:
+        t = f"@{ig[r['id']]}" if r["id"] in ig else None
+        if t and r["id"] not in shown and t not in seen:
+            extra.append(t); seen.add(t)
     if extra:
         line, room = "Also this week: ", limit - used - 120
         kept = []
