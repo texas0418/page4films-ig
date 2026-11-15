@@ -77,7 +77,7 @@ CALENDAR_LINE = "Free film festival and screenplay contest deadline calendar: fe
 
 def append_to(caption, slug):
     """Caption with the calendar line and its tag block appended, trimmed to Meta's limits."""
-    if "festivals.page4films.com" not in caption:
+    if "festivals.page4films.com" not in caption and "circuit.page4films.com" not in caption:   # Indie Circuit posts carry their own link (11-14)
         caption = caption + "\n\n" + CALENDAR_LINE
     tags = tags_for(slug)
     existing = caption.count("#")
